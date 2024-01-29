@@ -9,6 +9,7 @@ def import_data(kind=None):
         """
 
     # import libraries
+    import pandas as pd
     from ucimlrepo import fetch_ucirepo 
     
     # fetch dataset 
@@ -18,14 +19,14 @@ def import_data(kind=None):
     data_1 = diabetes_130_us_hospitals_for_years_1999_2008.data.features 
     data_2 = diabetes_130_us_hospitals_for_years_1999_2008.data.targets 
 
-    if kind=None:
+    if kind==None:
         # merge dataframes
         data = pd.concat([data_1, data_2], axis=1)
 
         # return data
         return data
     
-    elif kind='basic':
+    elif kind=='basic':
         col = ['race', 'gender', 'age', 'weight', 'admission_type_id',
        'discharge_disposition_id', 'admission_source_id', 'time_in_hospital',
        'payer_code', 'medical_specialty', 'num_lab_procedures',
@@ -36,14 +37,14 @@ def import_data(kind=None):
         # return basic data
         return data_1[col]
     
-    elif kind='tests':
+    elif kind=='tests':
         col = ['max_glu_serum', 'A1Cresult']
 
         # return tests data
         return data_1[col]
 
     
-    elif kind='drugs':
+    elif kind=='drugs':
         col = ['metformin',
        'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride',
        'acetohexamide', 'glipizide', 'glyburide', 'tolbutamide',
@@ -56,13 +57,13 @@ def import_data(kind=None):
         # return drugs data
         return data_1[col]
     
-    elif kind='other':
+    elif kind=='other':
         col = ['change', 'diabetesMed']
 
         # return other data
         return data_1[col]
     
-    elif kind='targets':
+    elif kind=='targets':
         col = ['readmitted']
 
         # return targets data
