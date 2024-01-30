@@ -3,6 +3,7 @@
 ## 📝 Table of Contents
 [Data](#data)
 [Goal](#goal)
+[Files](#files)
 
 ## 📊 Data
 
