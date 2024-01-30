@@ -1,9 +1,9 @@
 # diabetes-ucidata
 
 ## 📝 Table of Contents
-[Data](#data)
-[Goal](#goal)
-[Files](#files)
+1. [Data](#data)
+2. [Goal](#goal)
+3. [Files](#files)
 
 ## 📊 Data
 
