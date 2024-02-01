@@ -1,0 +1,46 @@
+def data_wo_weight(data):
+    '''Returns data with weight column removed.'''
+
+    # remove weight column
+    data = data.drop(columns='weight')
+
+    # return data
+    return data
+
+def impute_data(data):
+    '''Returns data with missing values imputed.'''
+
+    # import libraries
+    from sklearn.impute import SimpleImputer
+
+    # get all categorical columns
+    cat_cols = data.select_dtypes(include=['object']).columns
+
+    # get all numerical columns
+    num_cols = data.select_dtypes(include=['int64', 'float64']).columns
+
+    # impute missing values
+    imputer = SimpleImputer(strategy='most_frequent')
+    data[cat_cols] = imputer.fit_transform(data[cat_cols])
+
+    # impute missing values
+    imputer = SimpleImputer(strategy='mean')
+    data[num_cols] = imputer.fit_transform(data[num_cols])
+
+    # return data
+    return data
+
+# main script
+if __name__ == '__main__':
+    # import data
+    import sys
+    sys.path.append('../../')
+    from src.data.data_collection import import_data
+    data = import_data()
+
+    # remove weight column
+    data_wo_weight = data_wo_weight(data)
+
+    # impute missing values
+    data_imputed = impute_data(data)
+    data_imputed_wo_weight = impute_data(data_wo_weight)
