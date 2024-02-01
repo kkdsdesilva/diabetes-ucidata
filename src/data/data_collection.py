@@ -71,7 +71,7 @@ def import_data(kind=None):
     
     else:
         raise ValueError('Invalid kind: %s' % kind)
-    
+
 # main script logic
 if __name__ == '__main__':
     # import data
