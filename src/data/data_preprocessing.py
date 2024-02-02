@@ -1,3 +1,21 @@
+def add_dtypes(data):
+    '''Returns data with dtypes correctly assigned.'''
+    # import libraries
+    import pandas as pd
+
+    numeric_cols = ['time_in_hospital', 'num_lab_procedures', 'num_procedures', 'num_medications', 'number_outpatient', 'number_emergency', 'number_inpatient', 'number_diagnoses']
+    categorical = data.columns.difference(numeric_cols)
+
+    # assign dtypes to float to numeric columns
+    data[numeric_cols] = data[numeric_cols].astype('float')
+
+    # assign dtypes to object to categorical columns
+    data[categorical] = data[categorical].astype('object')
+
+    # return data
+    return data
+
+
 def data_wo_weight(data):
     '''Returns data with weight column removed.'''
 
@@ -30,6 +48,8 @@ def impute_data(data):
     # return data
     return data
 
+
+
 # main script
 if __name__ == '__main__':
     # import data
@@ -37,6 +57,9 @@ if __name__ == '__main__':
     sys.path.append('../../')
     from src.data.data_collection import import_data
     data = import_data()
+
+    # add dtypes
+    data = add_dtypes(data)
 
     # remove weight column
     data_wo_weight = data_wo_weight(data)
