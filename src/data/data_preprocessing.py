@@ -62,27 +62,3 @@ def impute_data(data):
     # return data
     return data
 
-
-
-# main script
-if __name__ == '__main__':
-    # import data
-    import sys
-    sys.path.append('../../')
-    from src.data.data_collection import import_data
-    data = import_data()
-
-    # add dtypes
-    data = add_dtypes(data)
-
-    # remove weight column
-    data_without_weight = data_wo_weight(data)
-    data_with_weight = data_w_weight(data)
-
-    # impute missing values
-    data_without_weight = impute_data(data_without_weight)
-    data_with_weight = impute_data(data_with_weight)
-
-
-    # print
-    print('data_without_weight and data_with_weight are created. dtypes are assigned and missing values are imputed.')
