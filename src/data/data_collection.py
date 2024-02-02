@@ -71,11 +71,3 @@ def import_data(kind=None):
     
     else:
         raise ValueError('Invalid kind: %s' % kind)
-
-# main script logic
-if __name__ == '__main__':
-    # import data
-    data = import_data()
-    
-    # print info
-    print(data.info()) 
