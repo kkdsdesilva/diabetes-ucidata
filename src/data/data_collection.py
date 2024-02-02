@@ -1,3 +1,12 @@
+# import libraries
+import pandas as pd
+from ucimlrepo import fetch_ucirepo
+import warnings
+
+# ignore warnings
+warnings.filterwarnings('ignore', category=pd.errors.DtypeWarning)
+
+# function for import data
 def import_data(kind=None):
     """Import data from various sources.
     kind: str
@@ -7,10 +16,6 @@ def import_data(kind=None):
             data: pandas dataframe
                 The data to be used for analysis.
         """
-
-    # import libraries
-    import pandas as pd
-    from ucimlrepo import fetch_ucirepo 
     
     # fetch dataset 
     diabetes_130_us_hospitals_for_years_1999_2008 = fetch_ucirepo(id=296) 
