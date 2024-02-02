@@ -1,9 +1,9 @@
 # diabetes-ucidata
 
 ## 📝 Table of Contents
-1. [Data](#📊-datad)
+1. [Data](#📊-data)
 2. [Goal](#📈-goal)
-3. [Data Collection and Preprocessing the data](#data Collection and preprocessing the data)
+3. [Data Collection and Preprocessing the data](#data-collection-and-preprocessing-the-data)
 
 ## 📊 Data
 
@@ -45,7 +45,7 @@ The following steps were followed for data collection:
 6. Save the data: The cleaned data was saved in a suitable format (e.g., CSV) for further analysis.
 
 
-[]: # FILEPATH: /src/data/data_preprocessing.py
+#### FILEPATH: /src/data/data_preprocessing.py
 
 Data Preprocessing
 
@@ -62,7 +62,7 @@ The second part of the dataset includes the weight column, but only includes the
 By dividing the dataset in this way, we can handle the weight column separately or exclude it altogether, depending on the specific requirements of our analysis or modeling tasks.
 
 
-[]: # FILEPATH: /src/data/data_scaling.py
+#### FILEPATH: /src/data/data_scaling.py
 
 Data Scaling
 
@@ -70,10 +70,10 @@ Data scaling is a technique used to standardize the range of features in the dat
 
 1. Min-max scaling: This technique scales the features to a specific range, typically between 0 and 1. It is calculated using the formula:
 
-    scaled_value = (value - min_value) / (max_value - min_value)
+    $$ \rm{scaled\_value} = \frac{\rm{value} - \rm{min\_value}}{\rm{max\_value} - \rm{min\_value}}.$$
 
 2. Standardization: This technique transforms the features to have zero mean and unit variance. It is calculated using the formula:
 
-    standardized_value = (value - mean) / standard_deviation
+    $$\rm{standardized\_value} = \frac{\rm{value} - \rm{mean}}{\rm{standard\_deviation}}.$$
 
 These data scaling techniques were applied to the numeric features in the dataset to ensure that they have a consistent scale and distribution.
