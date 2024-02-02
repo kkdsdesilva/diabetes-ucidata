@@ -74,6 +74,6 @@ Data scaling is a technique used to standardize the range of features in the dat
 
 2. Standardization: This technique transforms the features to have zero mean and unit variance. It is calculated using the formula:
 
-    $$ \rm{standardized{\_}value} = \frac{\rm{value} - \rm{mean}}{\rm{standard{\}_deviation}}. $$
+    $$ \rm{standardized{\_}value} = \frac{\rm{value} - \rm{mean}}{\rm{standard{\_}deviation}}. $$
 
 These data scaling techniques were applied to the numeric features in the dataset to ensure that they have a consistent scale and distribution.
