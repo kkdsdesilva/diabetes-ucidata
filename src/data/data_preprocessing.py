@@ -1,9 +1,12 @@
 # Description: This script contains functions to preprocess the data.
+
+# import libraries
+import pandas as pd
+from sklearn.impute import SimpleImputer
+
 # add_dtypes: Assigns dtypes to the columns of the dataframe.
 def add_dtypes(data):
     '''Returns data with dtypes correctly assigned.'''
-    # import libraries
-    import pandas as pd
 
     numeric_cols = ['time_in_hospital', 'num_lab_procedures', 'num_procedures', 'num_medications', 'number_outpatient', 'number_emergency', 'number_inpatient', 'number_diagnoses']
     categorical = data.columns.difference(numeric_cols)
@@ -27,7 +30,6 @@ def data_wo_weight(data):
     # return data
     return data
 
-
 # data_w_weight: Returns values where weight values are present.
 def data_w_weight(data):
     '''Returns values where weight values are present.'''
@@ -41,9 +43,6 @@ def data_w_weight(data):
 # impute_data: Returns data with missing values imputed.
 def impute_data(data):
     '''Returns data with missing values imputed.'''
-
-    # import libraries
-    from sklearn.impute import SimpleImputer
 
     # get all categorical columns
     cat_cols = data.select_dtypes(include=['object']).columns
@@ -61,4 +60,3 @@ def impute_data(data):
 
     # return data
     return data
-
