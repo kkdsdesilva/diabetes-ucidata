@@ -1,3 +1,5 @@
+# Description: This script contains functions to preprocess the data.
+# add_dtypes: Assigns dtypes to the columns of the dataframe.
 def add_dtypes(data):
     '''Returns data with dtypes correctly assigned.'''
     # import libraries
@@ -15,7 +17,7 @@ def add_dtypes(data):
     # return data
     return data
 
-
+# data_wo_weight: Returns data with weight column removed.
 def data_wo_weight(data):
     '''Returns data with weight column removed.'''
 
@@ -25,6 +27,7 @@ def data_wo_weight(data):
     # return data
     return data
 
+# impute_data: Returns data with missing values imputed.
 def impute_data(data):
     '''Returns data with missing values imputed.'''
 
