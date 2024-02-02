@@ -1,8 +1,8 @@
 # diabetes-ucidata
 
 ## 📝 Table of Contents
-1. [Data](#data)
-2. [Goal](#goal)
+1. [Data](#📊-datad)
+2. [Goal](#📈-goal)
 3. [Data Collection and Preprocessing the data](#data Collection and preprocessing the data)
 
 ## 📊 Data
