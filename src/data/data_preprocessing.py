@@ -50,13 +50,16 @@ def impute_data(data):
     # get all numerical columns
     num_cols = data.select_dtypes(include=['int64', 'float64']).columns
 
+    # get a copy of the data
+    data_copy = data.copy()
+
     # impute missing values
     imputer = SimpleImputer(strategy='most_frequent')
-    data[cat_cols] = imputer.fit_transform(data[cat_cols])
+    data_copy.loc[:, cat_cols] = imputer.fit_transform(data[cat_cols])
 
     # impute missing values
     imputer = SimpleImputer(strategy='mean')
-    data[num_cols] = imputer.fit_transform(data[num_cols])
+    data_copy.loc[:, num_cols] = imputer.fit_transform(data[num_cols])
 
     # return data
-    return data
+    return data_copy
