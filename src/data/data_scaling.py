@@ -35,20 +35,3 @@ def normalize_data(data):
 
     # return data
     return data
-
-# main script
-if __name__ == '__main__':
-    # import data
-    %run '../../src/data/data_preprocessing.py'
-
-    # standardize data
-    data_weight_standardized = standardize_data(data_with_weight)
-    data_without_weight_standardized = standardize_data(data_without_weight)
-
-
-    # normalize data
-    data_weight_normalized = normalize_data(data_with_weight)
-    data_without_weight_normalized = normalize_data(data_without_weight)
-
-    # print info
-    print('data_weight_standardized, data_without_weight_standardized, data_weight_normalized, data_without_weight_normalized are created.')
