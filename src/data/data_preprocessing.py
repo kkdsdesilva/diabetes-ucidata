@@ -27,6 +27,17 @@ def data_wo_weight(data):
     # return data
     return data
 
+
+# data_w_weight: Returns values where weight values are present.
+def data_w_weight(data):
+    '''Returns values where weight values are present.'''
+    
+    # get rows where weight is present
+    data = data[data['weight'].notna()]
+
+    # return data
+    return data
+
 # impute_data: Returns data with missing values imputed.
 def impute_data(data):
     '''Returns data with missing values imputed.'''
@@ -65,8 +76,13 @@ if __name__ == '__main__':
     data = add_dtypes(data)
 
     # remove weight column
-    data_wo_weight = data_wo_weight(data)
+    data_without_weight = data_wo_weight(data)
+    data_with_weight = data_w_weight(data)
 
     # impute missing values
-    data_imputed = impute_data(data)
-    data_imputed_wo_weight = impute_data(data_wo_weight)
+    data_without_weight = impute_data(data_without_weight)
+    data_with_weight = impute_data(data_with_weight)
+
+
+    # print
+    print('data_without_weight and data_with_weight are created. dtypes are assigned and missing values are imputed.')
