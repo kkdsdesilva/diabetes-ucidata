@@ -23,7 +23,3 @@ def one_hot_encode(data, cat_cols):
     
     # return the data
     return data
-
-                            
-
-
