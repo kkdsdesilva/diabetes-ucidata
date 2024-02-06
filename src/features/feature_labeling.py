@@ -4,18 +4,20 @@
 import pandas as pd
 
 # label_encode: Returns the column with categorical features labeled and encoded.
-def label_encode(col, dic):
+def label_encode(df, col, dic):
     '''Returns the column with categorical features labeled and encoded.'''
     
-    # label encode the column using the dictionary
-    col = col.map(dic)
+    # copy of the dataframe
+    data = df.copy()
+
+    data[col] = data[col].map(dic)
 
     # return the column
-    return col
+    return data
 
 
 # one hot encode the categorical features
-def one_hot_encode(data, cat_cols):
+def one_hot_encode(data, cat_cols=None):
     '''Returns the data with categorical features one hot encoded.'''
     
     # one hot encode the categorical features
