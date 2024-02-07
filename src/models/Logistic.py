@@ -4,7 +4,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 
-def train_LogReg(X_train, X_test, y_train, y_test, pen='l2', max_iter=1000, C=1.0, solver='lbfgs'):
+def train_LogReg(X_train, y_train, pen='l2', max_iter=1000, C=1.0, solver='lbfgs'):
     '''Returns the logistic regression model and print the predictions.'''
     
     # create the logistic
@@ -17,7 +17,7 @@ def train_LogReg(X_train, X_test, y_train, y_test, pen='l2', max_iter=1000, C=1.
     return logreg
 
 
-def evaluate_model(model, y_train, y_train_pred, y_test, y_test_pred):
+def evaluate_model(model, X_train, X_test, y_train, y_test):
     '''Returns the accuracy of the model.'''
     
     # predict values
