@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/decision_tree/mlruns/422495192799260005/5819431d53104343a359223ac4408887/artifacts
+end_time: 1707349254157
+entry_point_name: ''
+experiment_id: '422495192799260005'
+lifecycle_stage: active
+run_id: 5819431d53104343a359223ac4408887
+run_name: fortunate-shrew-700
+run_uuid: 5819431d53104343a359223ac4408887
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707349252563
+status: 3
+tags: []
+user_id: dumindu

@@ -10,6 +10,8 @@ cur_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.join(cur_dir, '../../')
 sys.path.append(root_dir)
 
+from src.features.feature_labeling import label_encode, one_hot_encode
+
 # function to load the data
 def load_data(processed=True, weight=False):
     '''Returns the data.
@@ -30,3 +32,9 @@ def load_data(processed=True, weight=False):
         else:
             data = pd.read_csv(root_dir+'/data/processed/diabetes_without_weight_cleaned.csv')
             return data
+        
+def preprocess_data(data):
+    """Load and preprocess the dataset."""
+    data = label_encode(data, 'readmitted', {'NO': 0, '>30': 1, '<30': 1})
+    data = one_hot_encode(data)
+    return data

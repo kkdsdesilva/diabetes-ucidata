@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/decision_tree/mlruns/422495192799260005/ce750627066a49cbb506177841c374b9/artifacts
+end_time: 1707349268576
+entry_point_name: ''
+experiment_id: '422495192799260005'
+lifecycle_stage: active
+run_id: ce750627066a49cbb506177841c374b9
+run_name: bustling-slug-508
+run_uuid: ce750627066a49cbb506177841c374b9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707349266963
+status: 3
+tags: []
+user_id: dumindu

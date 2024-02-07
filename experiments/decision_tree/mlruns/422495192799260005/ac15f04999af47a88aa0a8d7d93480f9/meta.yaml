@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/decision_tree/mlruns/422495192799260005/ac15f04999af47a88aa0a8d7d93480f9/artifacts
+end_time: 1707349175194
+entry_point_name: ''
+experiment_id: '422495192799260005'
+lifecycle_stage: active
+run_id: ac15f04999af47a88aa0a8d7d93480f9
+run_name: amazing-seal-802
+run_uuid: ac15f04999af47a88aa0a8d7d93480f9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707349173487
+status: 3
+tags: []
+user_id: dumindu

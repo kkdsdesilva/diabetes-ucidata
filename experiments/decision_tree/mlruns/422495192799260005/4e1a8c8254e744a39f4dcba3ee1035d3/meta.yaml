@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/decision_tree/mlruns/422495192799260005/4e1a8c8254e744a39f4dcba3ee1035d3/artifacts
+end_time: 1707349206170
+entry_point_name: ''
+experiment_id: '422495192799260005'
+lifecycle_stage: active
+run_id: 4e1a8c8254e744a39f4dcba3ee1035d3
+run_name: painted-finch-14
+run_uuid: 4e1a8c8254e744a39f4dcba3ee1035d3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707349204550
+status: 3
+tags: []
+user_id: dumindu

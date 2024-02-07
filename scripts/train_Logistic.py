@@ -12,19 +12,12 @@ cur_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.join(cur_dir, '../')
 sys.path.append(root_dir)
 
-from src.data.load_data import load_data
+from src.data.load_data import load_data, preprocess_data
 from src.data.data_scaling import standardize_data, normalize_data
 from src.features.feature_labeling import label_encode, one_hot_encode
 from src.data.split_data import split_data
 from src.models.Logistic import train_Logistic
 from src.models.evaluate import evaluate_model
-
-def load_and_preprocess_data():
-    """Load and preprocess the dataset."""
-    data = load_data()
-    data = label_encode(data, 'readmitted', {'NO': 0, '>30': 1, '<30': 1})
-    data = one_hot_encode(data)
-    return data
 
 def log_model_metrics(logreg, X_train, X_test, y_train, y_test):
     """Log model metrics to MLflow."""
@@ -34,7 +27,7 @@ def log_model_metrics(logreg, X_train, X_test, y_train, y_test):
 
 def main():
     # Load and preprocess data
-    data = load_and_preprocess_data()
+    data = preprocess_data(load_data())
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
