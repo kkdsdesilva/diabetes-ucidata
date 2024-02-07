@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/logistic_regression/mlruns/845489005852975986/c3297067398747c9a235ac9f31d0b9c7/artifacts
+end_time: 1707347925844
+entry_point_name: ''
+experiment_id: '845489005852975986'
+lifecycle_stage: active
+run_id: c3297067398747c9a235ac9f31d0b9c7
+run_name: resilient-perch-530
+run_uuid: c3297067398747c9a235ac9f31d0b9c7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707347923674
+status: 3
+tags: []
+user_id: dumindu
