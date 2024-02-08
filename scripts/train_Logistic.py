@@ -15,6 +15,7 @@ sys.path.append(root_dir)
 from src.data.load_data import load_data
 from src.data.data_scaling import standardize_data, normalize_data
 from src.features.feature_labeling import label_and_one_hot_encode
+from src.features.feature_selection import select_features
 from src.data.split_data import split_data
 from src.models.Logistic import train_Logistic
 from src.models.evaluate import evaluate_model
@@ -32,12 +33,16 @@ def main():
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
 
+    # Select the features
+    #X_train = select_features(X_train, y_train, k=10)
+    #X_test = select_features(X_test, y_test, k=10)
+
     # Standardize the data
     X_train = standardize_data(X_train)
     X_test = standardize_data(X_test)
 
     # Train the model
-    logreg = train_Logistic(X_train, y_train, max_iter=1500, C=1)
+    logreg = train_Logistic(X_train, y_train, max_iter=1500, C=1, pen='l1', solver= 'liblinear')
 
     # Log model and metrics to MLflow
     mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))
@@ -50,6 +55,6 @@ def main():
         mlflow.log_params({"penalty": logreg.get_params()['penalty'], "C": logreg.get_params()['C']})
         log_model_metrics(logreg, X_train, X_test, y_train, y_test)
 
-
+    
 if __name__ == '__main__':
     main()

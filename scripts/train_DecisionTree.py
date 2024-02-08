@@ -33,7 +33,7 @@ def main():
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
 
     # Train the model
-    dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=10, min_samples_split=2)
+    dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=10, min_samples_split=4)
 
     # Log model and metrics to MLflow
     mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))

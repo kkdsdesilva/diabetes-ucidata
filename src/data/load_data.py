@@ -35,6 +35,7 @@ def load_data(processed=True, weight=False):
         
 def label_data(data):
     """Load and preprocess the dataset."""
+    
     data = label_encode(data, 'readmitted', {'NO': 0, '>30': 1, '<30': 1})
     data = one_hot_encode(data)
     return data
