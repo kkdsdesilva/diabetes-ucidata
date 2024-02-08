@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/238550786735983475/c305f30063f04c26bda49076c660ca70/artifacts
+end_time: 1707376225540
+entry_point_name: ''
+experiment_id: '238550786735983475'
+lifecycle_stage: active
+run_id: c305f30063f04c26bda49076c660ca70
+run_name: dazzling-mole-628
+run_uuid: c305f30063f04c26bda49076c660ca70
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707376223799
+status: 3
+tags: []
+user_id: dumindu
