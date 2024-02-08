@@ -43,7 +43,10 @@ def main():
 
     with mlflow.start_run():
         mlflow.sklearn.log_model(dtree, "decision_tree_model")
-        mlflow.log_params({"criterion": dtree.get_params()['criterion'], "max_depth": dtree.get_params()['max_depth'], "min_samples_split": dtree.get_params()['min_samples_split']})
+        mlflow.log_params({"criterion": dtree.get_params()['criterion'], \
+                        "max_depth": dtree.get_params()['max_depth'], \
+                        "min_samples_split": dtree.get_params()['min_samples_split'], \
+                        "number of features": X_train.shape[1]})
         log_model_metrics(dtree, X_train, X_test, y_train, y_test)
 
 if __name__ == '__main__':
