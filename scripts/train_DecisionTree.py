@@ -12,7 +12,8 @@ cur_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.join(cur_dir, '../')
 sys.path.append(root_dir)
 
-from src.data.load_data import load_data, preprocess_data
+from src.data.load_data import load_data
+from src.features.feature_labeling import label_and_one_hot_encode
 from src.data.split_data import split_data
 from src.data.data_scaling import standardize_data
 from src.models.DecisionTree import train_DecisionTree
@@ -26,7 +27,7 @@ def log_model_metrics(dtree, X_train, X_test, y_train, y_test):
 
 def main():
     # Load and preprocess data
-    data = preprocess_data(load_data())
+    data = label_and_one_hot_encode(load_data())
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
@@ -35,7 +36,7 @@ def main():
     dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=10, min_samples_split=2)
 
     # Log model and metrics to MLflow
-    mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'decision_tree', 'mlruns'))
+    mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))
 
     # Set the experiment
     mlflow.set_experiment('decision_tree_experiment')

@@ -33,7 +33,7 @@ def load_data(processed=True, weight=False):
             data = pd.read_csv(root_dir+'/data/processed/diabetes_without_weight_cleaned.csv')
             return data
         
-def preprocess_data(data):
+def label_data(data):
     """Load and preprocess the dataset."""
     data = label_encode(data, 'readmitted', {'NO': 0, '>30': 1, '<30': 1})
     data = one_hot_encode(data)

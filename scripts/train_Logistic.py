@@ -12,9 +12,9 @@ cur_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.join(cur_dir, '../')
 sys.path.append(root_dir)
 
-from src.data.load_data import load_data, preprocess_data
+from src.data.load_data import load_data
 from src.data.data_scaling import standardize_data, normalize_data
-from src.features.feature_labeling import label_encode, one_hot_encode
+from src.features.feature_labeling import label_and_one_hot_encode
 from src.data.split_data import split_data
 from src.models.Logistic import train_Logistic
 from src.models.evaluate import evaluate_model
@@ -27,7 +27,7 @@ def log_model_metrics(logreg, X_train, X_test, y_train, y_test):
 
 def main():
     # Load and preprocess data
-    data = preprocess_data(load_data())
+    data = label_and_one_hot_encode(load_data())
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
@@ -40,7 +40,7 @@ def main():
     logreg = train_Logistic(X_train, y_train, max_iter=1500, C=1)
 
     # Log model and metrics to MLflow
-    mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'logistic_regression', 'mlruns'))
+    mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))
 
     # Set the experiment
     mlflow.set_experiment('logistic_regression_experiment')

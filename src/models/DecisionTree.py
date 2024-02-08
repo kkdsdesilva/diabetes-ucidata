@@ -3,7 +3,7 @@
 # import libraries
 from sklearn.tree import DecisionTreeClassifier
 
-def train_DecisionTree(X_train, y_train, criterion='gini', max_depth=None, min_samples_split=2):
+def train_DecisionTree(X_train, y_train, criterion='gini', max_depth=None, min_samples_split=2, n_jobs=-1):
     '''Returns the decision tree model and print the predictions.'''
     
     # create the decision tree
