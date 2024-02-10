@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/238550786735983475/3070121436e04383b112cf4fc6647198/artifacts
+end_time: 1707517976398
+entry_point_name: ''
+experiment_id: '238550786735983475'
+lifecycle_stage: active
+run_id: 3070121436e04383b112cf4fc6647198
+run_name: resilient-yak-262
+run_uuid: 3070121436e04383b112cf4fc6647198
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707517974986
+status: 3
+tags: []
+user_id: dumindu

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/3b0b52df453a49e0b8079132d287a44d/artifacts
+end_time: 1707379371718
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: 3b0b52df453a49e0b8079132d287a44d
+run_name: omniscient-sow-715
+run_uuid: 3b0b52df453a49e0b8079132d287a44d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707379370002
+status: 3
+tags: []
+user_id: dumindu
