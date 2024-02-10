@@ -58,7 +58,7 @@ def main():
     mlflow.set_experiment('decision_tree_experiment')
 
     with mlflow.start_run():
-        mlflow.sklearn.log_model(dtree, "decision_tree_model")
+        #mlflow.sklearn.log_model(dtree, "decision_tree_model")
         mlflow.log_params({"criterion": dtree.get_params()['criterion'], \
                         "max_depth": dtree.get_params()['max_depth'], \
                         "min_samples_split": dtree.get_params()['min_samples_split'], \

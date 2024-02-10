@@ -63,7 +63,7 @@ def main():
 
     with mlflow.start_run():
         # log model
-        mlflow.sklearn.log_model(logreg, "logistic_regression_model")
+        #mlflow.sklearn.log_model(logreg, "logistic_regression_model")
 
         #log parameters
         mlflow.log_params({"penalty": logreg.get_params()['penalty'], "C": logreg.get_params()['C']})
