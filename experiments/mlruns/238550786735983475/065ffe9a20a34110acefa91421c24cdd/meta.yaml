@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/238550786735983475/065ffe9a20a34110acefa91421c24cdd/artifacts
+end_time: 1707512937456
+entry_point_name: ''
+experiment_id: '238550786735983475'
+lifecycle_stage: active
+run_id: 065ffe9a20a34110acefa91421c24cdd
+run_name: enchanting-vole-469
+run_uuid: 065ffe9a20a34110acefa91421c24cdd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707512936127
+status: 3
+tags: []
+user_id: dumindu

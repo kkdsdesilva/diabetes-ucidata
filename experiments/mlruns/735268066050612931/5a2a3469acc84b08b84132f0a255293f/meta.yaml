@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/5a2a3469acc84b08b84132f0a255293f/artifacts
+end_time: 1707515321951
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: 5a2a3469acc84b08b84132f0a255293f
+run_name: gifted-mare-790
+run_uuid: 5a2a3469acc84b08b84132f0a255293f
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707515320619
+status: 3
+tags: []
+user_id: dumindu

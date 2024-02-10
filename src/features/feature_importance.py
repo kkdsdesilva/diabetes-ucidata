@@ -4,11 +4,11 @@
 import pandas as pd
 
 # feature_importance: Returns the feature importance of the supported models.
-def feature_importance(model, data):
+def feature_importance_other(model, data):
     '''Returns the feature importance of the model.'''
     
     # create a dataframe of the feature importance
-    importance = pd.DataFrame(model.feature_importances_, index=data.columns, columns=['importance']).sort_values('importance', ascending=False)
+    importance = pd.DataFrame(model.feature_importances_, index=data.columns, columns=['importance'])
     
     # return the feature importance
     return importance
@@ -19,8 +19,8 @@ def feature_importance_logreg(model, data):
     '''Returns the feature importance of the logistic regression model.'''
     
     # create a dataframe of the feature importance
-    importance = pd.DataFrame(model.coef_.T, index=data.columns, columns=['importance']).sort_values('importance', ascending=False)
-    
+    importance = pd.DataFrame(model.coef_.T, index=data.columns, columns=['importance'])
+
     # return the feature importance
     return importance
 
@@ -31,6 +31,9 @@ def pick_top_k_features(data, importance, k=10):
 
     # get the absolute value of the importance
     importance['importance'] = abs(importance['importance'])
+
+    # sort the importance
+    importance = importance.sort_values('importance', ascending=False)
     
     # pick the top k features
     top_k_features = importance.head(k)
