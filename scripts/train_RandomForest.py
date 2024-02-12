@@ -17,7 +17,7 @@ from src.data.split_data import split_data
 from src.models.RandomForest import train_RandomForest
 from src.models.evaluate import evaluate_model
 from src.features.feature_importance import feature_importance_other, pick_top_k_features
-from src.features.feature_labeling import label_and_one_hot_encode
+from src.features.engineering import engineer_features
 from src.models.log import log_model_metrics
 
 
@@ -50,16 +50,16 @@ def main():
        'number_diagnoses', 'readmitted']
 
     # Load and preprocess data
-    data = engineer_features(load_data())
+    data = engineer_features(load_data()[cols])
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted', test_size=0.2)
 
     # pick the best k features
-    X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=50)
+    #X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=50)
 
     # Train the model
-    rf = train_RandomForest(X_train, y_train, n_estimators=100, max_depth=40, min_samples_split=4)
+    rf = train_RandomForest(X_train, y_train, n_estimators=100, max_depth=10, min_samples_split=4)
 
     # Log model and metrics to MLflow
     mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))
@@ -68,8 +68,6 @@ def main():
     mlflow.set_experiment('random_forest_experiment')
 
     with mlflow.start_run():
-        # Log model
-        #mlflow.sklearn.log_model(rf, "random_forest_model")
 
         # Log model metrics
         log_model_metrics(rf, X_train, X_test, y_train, y_test)

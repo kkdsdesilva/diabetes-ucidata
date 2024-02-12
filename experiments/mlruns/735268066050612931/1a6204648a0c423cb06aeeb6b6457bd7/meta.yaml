@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/1a6204648a0c423cb06aeeb6b6457bd7/artifacts
+end_time: 1707774157208
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: 1a6204648a0c423cb06aeeb6b6457bd7
+run_name: dashing-hog-973
+run_uuid: 1a6204648a0c423cb06aeeb6b6457bd7
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707774157092
+status: 3
+tags: []
+user_id: dumindu

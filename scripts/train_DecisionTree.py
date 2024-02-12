@@ -51,7 +51,9 @@ def main():
             ]
 
     # Load and preprocess data
-    data = engineer_features(load_data(columns=cols))
+    data = engineer_features(load_data()[['admission_source_id', 'time_in_hospital', 'num_lab_procedures',
+       'num_procedures', 'num_medications', 'number_outpatient',
+       'number_emergency', 'number_inpatient', 'number_diagnoses', 'readmitted']])
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
