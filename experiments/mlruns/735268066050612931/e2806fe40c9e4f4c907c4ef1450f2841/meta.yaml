@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/e2806fe40c9e4f4c907c4ef1450f2841/artifacts
+end_time: 1707766825734
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: e2806fe40c9e4f4c907c4ef1450f2841
+run_name: worried-gull-894
+run_uuid: e2806fe40c9e4f4c907c4ef1450f2841
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707766825365
+status: 3
+tags: []
+user_id: dumindu

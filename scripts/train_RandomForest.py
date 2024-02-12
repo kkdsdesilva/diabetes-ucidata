@@ -38,8 +38,19 @@ def pick_best_k_features(X_train, X_test, y_train, y_test, k):
     return X_train_k, X_test_k
 
 def main():
+    import warnings
+    warnings.filterwarnings('ignore')
+
+    # select columns to use
+    cols = ['race', 'gender', 'age', 'admission_type_id',
+       'discharge_disposition_id', 'admission_source_id', 'time_in_hospital',
+       'payer_code', 'medical_specialty', 'num_lab_procedures',
+       'num_procedures', 'num_medications', 'number_outpatient',
+       'number_emergency', 'number_inpatient', 'diag_1', 'diag_2', 'diag_3',
+       'number_diagnoses', 'readmitted']
+
     # Load and preprocess data
-    data = label_and_one_hot_encode(load_data())
+    data = engineer_features(load_data())
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted', test_size=0.2)

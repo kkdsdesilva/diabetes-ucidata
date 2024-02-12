@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/d905acb3b1b940a58d2521574117b3a4/artifacts
+end_time: 1707766894894
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: d905acb3b1b940a58d2521574117b3a4
+run_name: carefree-shark-573
+run_uuid: d905acb3b1b940a58d2521574117b3a4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707766894793
+status: 3
+tags: []
+user_id: dumindu
