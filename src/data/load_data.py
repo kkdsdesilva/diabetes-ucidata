@@ -29,7 +29,7 @@ def add_dtypes(data):
     return data
 
 # function to load the data
-def load_data(processed=True, weight=False):
+def load_data(processed=True, weight=False, columns=None):
     '''Returns the data.
     kind: bool: type of data to load (raw or processed)
     weight: bool: whether to include weight in the data
@@ -37,21 +37,25 @@ def load_data(processed=True, weight=False):
 
     if processed==False:
         # load the raw data
-        data = pd.read_csv(root_dir+'/data/raw/diabetes.csv')
+        data = pd.read_csv(root_dir+'/data/raw/diabetes.csv', usecols=columns)
         return add_dtypes(data)
     
     elif processed:
         # load the processed data
         if weight:
-            data = pd.read_csv(root_dir+'/data/processed/diabetes_with_weight_cleaned.csv')
+            data = pd.read_csv(root_dir+'/data/processed/diabetes_with_weight_cleaned.csv', usecols=columns)
             return add_dtypes(data)
         else:
-            data = pd.read_csv(root_dir+'/data/processed/diabetes_without_weight_cleaned.csv')
+            data = pd.read_csv(root_dir+'/data/processed/diabetes_without_weight_cleaned.csv', usecols=columns)
             return add_dtypes(data)
-        
+
+
+# label_data: Load and preprocess the dataset.
 def label_data(data):
     """Load and preprocess the dataset."""
     
+    # label encode the target variable
     data = label_encode(data, 'readmitted', {'NO': 0, '>30': 1, '<30': 1})
     data = one_hot_encode(data)
+
     return data

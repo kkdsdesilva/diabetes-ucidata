@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/238550786735983475/2bcc2564eab4420bbce8613cf9a2327d/artifacts
+end_time: 1707760596307
+entry_point_name: ''
+experiment_id: '238550786735983475'
+lifecycle_stage: active
+run_id: 2bcc2564eab4420bbce8613cf9a2327d
+run_name: dapper-wolf-387
+run_uuid: 2bcc2564eab4420bbce8613cf9a2327d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707760596146
+status: 3
+tags: []
+user_id: dumindu

@@ -39,8 +39,19 @@ def pick_best_k_features(X_train, X_test, y_train, y_test, k):
 
 
 def main():
+    import warnings
+    warnings.filterwarnings('ignore')
+
+    # select columns to use
+    cols = ['race', 'gender', 'age', 'admission_type_id',
+       'discharge_disposition_id', 'admission_source_id', 'time_in_hospital',
+       'payer_code', 'medical_specialty', 'num_lab_procedures',
+       'num_procedures', 'num_medications', 'number_outpatient',
+       'number_emergency', 'number_inpatient', 
+       'number_diagnoses', 'readmitted']
+
     # Load and preprocess data
-    data = label_and_one_hot_encode(load_data())
+    data = label_and_one_hot_encode(load_data(columns=cols))
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
@@ -50,7 +61,7 @@ def main():
     X_test = standardize_data(X_test)
 
     # select the best k features
-    X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=1000)
+    #X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=1000)
 
     # Train the model
     logreg = train_Logistic(X_train, y_train, max_iter=1500, C=1, pen='l2', solver= 'lbfgs')
