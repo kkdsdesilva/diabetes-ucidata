@@ -61,17 +61,36 @@ def change_diag_columns(data):
     # return the data
     return data
 
+def change_medication_columns(data):
+    col = ['metformin',
+       'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride',
+       'acetohexamide', 'glipizide', 'glyburide', 'tolbutamide',
+       'pioglitazone', 'rosiglitazone', 'acarbose', 'miglitol', 'troglitazone',
+       'tolazamide', 'examide', 'citoglipton', 'insulin',
+       'glyburide-metformin', 'glipizide-metformin',
+       'glimepiride-pioglitazone', 'metformin-rosiglitazone',
+       'metformin-pioglitazone']
+    
+    for x in col:
+        if x in data.columns:
+            data[x] = data[x].map(lambda x: 0 if x=='No' else 1)
+
+    # return the data
+    return data
 
 
-def engineer_features(data):
+
+def engineer_features(data, readmit_days=False):
     '''Returns the data with engineered features.'''
 
     # change the diag columns
     data = change_diag_columns(data)
+
+    # change the medication columns
+    data = change_medication_columns(data)
     
     # change the diag columns
-    data = label_and_one_hot_encode(data)
-
+    data = label_and_one_hot_encode(data, readmit_days=readmit_days)
     
     # return the data
     return data

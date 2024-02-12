@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/263225028404746505/6a064f64f2c041c59bd3a199c6439619/artifacts
+end_time: 1707781787123
+entry_point_name: ''
+experiment_id: '263225028404746505'
+lifecycle_stage: active
+run_id: 6a064f64f2c041c59bd3a199c6439619
+run_name: sincere-frog-131
+run_uuid: 6a064f64f2c041c59bd3a199c6439619
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707781786915
+status: 3
+tags: []
+user_id: dumindu
