@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/2dea31199117470586fbd65411780596/artifacts
+end_time: 1707767835722
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: 2dea31199117470586fbd65411780596
+run_name: indecisive-fox-181
+run_uuid: 2dea31199117470586fbd65411780596
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707767835663
+status: 3
+tags: []
+user_id: dumindu

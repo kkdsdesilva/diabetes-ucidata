@@ -23,7 +23,7 @@ from src.models.log import log_model_metrics
 def pick_best_k_features(X_train, X_test, y_train, y_test, k=100):
     """Pick the best number of features for the model."""
     # train the model
-    model = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=10, min_samples_split=4)
+    model = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=15, min_samples_split=4)
 
     # get the feature importance
     importance = feature_importance_other(model, X_train)
@@ -42,12 +42,13 @@ def main():
     warnings.filterwarnings('ignore')
 
     # select columns to use
-    cols = ['race', 'gender', 'age', 'admission_type_id',
-       'discharge_disposition_id', 'admission_source_id', 'time_in_hospital',
-       'payer_code', 'medical_specialty', 'num_lab_procedures',
+    cols = ['race',  'gender', 'age', 'admission_type_id',
+       'discharge_disposition_id', 'admission_source_id', 'time_in_hospital', 'payer_code', 
+       'medical_specialty', 'num_lab_procedures',
        'num_procedures', 'num_medications', 'number_outpatient',
-       'number_emergency', 'number_inpatient', #'diag_1', #'diag_2', #'diag_3',
-       'number_diagnoses', 'readmitted']
+       'number_emergency', 'number_inpatient', 'diag_1', 'diag_2', 'diag_3',
+       'number_diagnoses', 'change', 'diabetesMed', 'readmitted' 
+            ]
 
     # Load and preprocess data
     data = engineer_features(load_data(columns=cols))
@@ -56,7 +57,7 @@ def main():
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
 
     # pick the best k features
-    #X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=1500)
+    #X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=2)
 
     # Train the model
     dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=15, min_samples_split=7)
@@ -72,6 +73,7 @@ def main():
                         "max_depth": dtree.get_params()['max_depth'], \
                         "min_samples_split": dtree.get_params()['min_samples_split'], \
                         "number of features": X_train.shape[1]})
+        
         log_model_metrics(dtree, X_train, X_test, y_train, y_test)
 
 if __name__ == '__main__':

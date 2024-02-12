@@ -12,9 +12,10 @@ sys.path.append(root_dir)
 
 from src.features.feature_labeling import label_encode, one_hot_encode
 
+
 # add_dtypes: Assigns dtypes to the columns of the dataframe.
 def add_dtypes(data):
-    '''Returns data with dtypes correctly assigned.'''
+    '''Returns data with dtypes correctly assigned.
 
     numeric_cols = ['time_in_hospital', 'num_lab_procedures', 'num_procedures', 'num_medications', 'number_outpatient', 'number_emergency', 'number_inpatient', 'number_diagnoses']
     categorical = data.columns.difference(numeric_cols)
@@ -23,13 +24,15 @@ def add_dtypes(data):
     data[numeric_cols] = data[numeric_cols].astype('float')
 
     # assign dtypes to object to categorical columns
-    data[categorical] = data[categorical].astype('object')
+    data[categorical] = data[categorical].astype('object')'''
 
     # return data
     return data
 
+
 # function to load the data
 def load_data(processed=True, weight=False, columns=None):
+
     '''Returns the data.
     kind: bool: type of data to load (raw or processed)
     weight: bool: whether to include weight in the data

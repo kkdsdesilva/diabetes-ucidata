@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/fca5e7220228443d9a508d4690ce73fb/artifacts
+end_time: 1707771353370
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: fca5e7220228443d9a508d4690ce73fb
+run_name: rebellious-mule-550
+run_uuid: fca5e7220228443d9a508d4690ce73fb
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707771353226
+status: 3
+tags: []
+user_id: dumindu
