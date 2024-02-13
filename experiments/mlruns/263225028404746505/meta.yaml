@@ -1,6 +1,0 @@
-artifact_location: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/263225028404746505
-creation_time: 1707774937242
-experiment_id: '263225028404746505'
-last_update_time: 1707774937242
-lifecycle_stage: active
-name: random_forest_experiment
