@@ -59,7 +59,7 @@ def main():
                         "min_samples_split": dtree.get_params()['min_samples_split'], \
                         "number of features": X_train.shape[1]})
         
-        log_model_metrics(dtree, X_train, X_test, y_train, y_test, predict_proba=True, threshold=0.5)
+        log_model_metrics(dtree, X_train, X_test, y_train, y_test, predict_proba=True, threshold=0.2)
 
 if __name__ == '__main__':
     main()

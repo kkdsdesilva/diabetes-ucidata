@@ -16,6 +16,10 @@ def standardize_data(data):
     # fit and transform data
     data[numeric_cols] = scaler.fit_transform(data[numeric_cols])
 
+    print('-'*20)
+    print('Data Standardized')
+    print('-'*20)
+
     # return data
     return data
 
@@ -31,6 +35,10 @@ def normalize_data(data):
 
     # fit and transform data
     data[numeric_cols] = scaler.fit_transform(data[numeric_cols])
+
+    print('-'*20)
+    print('Data Normalized')
+    print('-'*20)
 
     # return data
     return data

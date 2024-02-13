@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/863261518834586521/62f2e8201ac94c52aa7b98dfb332bd29/artifacts
+end_time: 1707865358024
+entry_point_name: ''
+experiment_id: '863261518834586521'
+lifecycle_stage: active
+run_id: 62f2e8201ac94c52aa7b98dfb332bd29
+run_name: nervous-elk-360
+run_uuid: 62f2e8201ac94c52aa7b98dfb332bd29
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707865357563
+status: 3
+tags: []
+user_id: dumindu

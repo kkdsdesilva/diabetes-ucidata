@@ -44,11 +44,8 @@ def main():
     X_train = standardize_data(X_train)
     X_test = standardize_data(X_test)
 
-    print(X_train.shape)
-
     # select the best features
-    X_train, X_test = select_features('Logistic', X_train, X_test, y_train, step=100)
-    print(X_train.shape)
+    #X_train, X_test = select_features('Logistic', X_train, X_test, y_train, step=100)
 
     # Train the model
     logreg = train_Logistic(X_train, y_train, max_iter=1500, C=1, pen='l2', solver= 'lbfgs')
@@ -64,7 +61,7 @@ def main():
         mlflow.log_params({"penalty": logreg.get_params()['penalty'], "C": logreg.get_params()['C']})
 
         # log model metrics
-        log_model_metrics(logreg, X_train, X_test, y_train, y_test)
+        log_model_metrics(logreg, X_train, X_test, y_train, y_test, predict_proba=True, threshold=0.3)
 
     
 if __name__ == '__main__':

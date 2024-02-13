@@ -20,7 +20,7 @@ def log_model_metrics(model, X_train, X_test, y_train, y_test, predict_proba=Fal
                                                predict_proba=predict_proba, threshold=threshold)
     train_f1, test_f1 = evaluate_model(model, X_train, X_test, y_train, y_test, metric='f1', \
                                        predict_proba=predict_proba, threshold=threshold)
-    roc_auc = evaluate_model(model, X_train, X_test, y_train, y_test, metric='roc_auc', predict_proba=True, threshold=threshold)
+    roc_auc = evaluate_model(model, X_train, X_test, y_train, y_test, metric='roc_auc')
 
     # log the metrics
     mlflow.log_metric("train_accuracy", train_acc)

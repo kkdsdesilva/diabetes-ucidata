@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/863261518834586521/8f28db05fe6a460287d98751fd97480b/artifacts
+end_time: 1707865319924
+entry_point_name: ''
+experiment_id: '863261518834586521'
+lifecycle_stage: active
+run_id: 8f28db05fe6a460287d98751fd97480b
+run_name: illustrious-ox-615
+run_uuid: 8f28db05fe6a460287d98751fd97480b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707865319539
+status: 3
+tags: []
+user_id: dumindu
