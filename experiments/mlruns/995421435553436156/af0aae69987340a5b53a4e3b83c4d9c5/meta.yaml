@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/af0aae69987340a5b53a4e3b83c4d9c5/artifacts
+end_time: 1707844968929
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: af0aae69987340a5b53a4e3b83c4d9c5
+run_name: receptive-goat-446
+run_uuid: af0aae69987340a5b53a4e3b83c4d9c5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707844968564
+status: 3
+tags: []
+user_id: dumindu

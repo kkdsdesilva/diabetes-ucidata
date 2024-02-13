@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/674208182422430503/8e7b107b19c841ad88cff79c1757c5dc/artifacts
+end_time: 1707856617670
+entry_point_name: ''
+experiment_id: '674208182422430503'
+lifecycle_stage: active
+run_id: 8e7b107b19c841ad88cff79c1757c5dc
+run_name: resilient-bat-437
+run_uuid: 8e7b107b19c841ad88cff79c1757c5dc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707856617045
+status: 3
+tags: []
+user_id: dumindu

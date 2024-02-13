@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/bf45511e7e304774b8679d3f9e34eb7c/artifacts
+end_time: 1707845143101
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: bf45511e7e304774b8679d3f9e34eb7c
+run_name: glamorous-slug-59
+run_uuid: bf45511e7e304774b8679d3f9e34eb7c
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707845142974
+status: 3
+tags: []
+user_id: dumindu

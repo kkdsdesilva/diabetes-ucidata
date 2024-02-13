@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/a6c86f0c61c546baa4978184dc718e4e/artifacts
+end_time: 1707853347517
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: a6c86f0c61c546baa4978184dc718e4e
+run_name: vaunted-mare-804
+run_uuid: a6c86f0c61c546baa4978184dc718e4e
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707853347421
+status: 3
+tags: []
+user_id: dumindu

@@ -1,0 +1,6 @@
+artifact_location: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/863261518834586521
+creation_time: 1707853814685
+experiment_id: '863261518834586521'
+last_update_time: 1707853814685
+lifecycle_stage: active
+name: logistic_regression_experiment

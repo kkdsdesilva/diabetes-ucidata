@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/674208182422430503/c151209172dd4286ad2ffa401e39ed95/artifacts
+end_time: 1707856573635
+entry_point_name: ''
+experiment_id: '674208182422430503'
+lifecycle_stage: active
+run_id: c151209172dd4286ad2ffa401e39ed95
+run_name: bold-colt-89
+run_uuid: c151209172dd4286ad2ffa401e39ed95
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707856572893
+status: 3
+tags: []
+user_id: dumindu

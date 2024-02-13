@@ -15,27 +15,11 @@ sys.path.append(root_dir)
 from src.data.load_data import load_data
 from src.data.data_scaling import standardize_data, normalize_data
 from src.features.engineering import engineer_features
-#from src.features.feature_importance import feature_importance_logreg, pick_top_k_features
+from src.features.selection import select_features
 from src.data.split_data import split_data
 from src.models.Logistic import train_Logistic
 from src.models.evaluate import evaluate_model
 from src.models.log import log_model_metrics
-
-def pick_best_k_features(X_train, X_test, y_train, y_test, k):
-    """Pick the best number of features for the model."""
-    # train the model
-    model = train_Logistic(X_train, y_train, max_iter=2000)
-
-    # get the feature importance
-    importance = feature_importance_logreg(model, X_train)
-
-    # pick the top k features
-    X_train_k = pick_top_k_features(X_train, importance, k)
-
-    # pick the top k features for the test set
-    X_test_k = X_test[X_train_k.columns]
-
-    return X_train_k, X_test_k
 
 
 def main():
@@ -51,7 +35,7 @@ def main():
        'number_diagnoses', 'readmitted']
 
     # Load and preprocess data
-    data = engineer_features(load_data()[cols])
+    data = engineer_features(load_data()[cols], 'readmitted', one_hot=True)
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
@@ -60,8 +44,11 @@ def main():
     X_train = standardize_data(X_train)
     X_test = standardize_data(X_test)
 
-    # select the best k features
-    #X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=1000)
+    print(X_train.shape)
+
+    # select the best features
+    X_train, X_test = select_features('Logistic', X_train, X_test, y_train, step=100)
+    print(X_train.shape)
 
     # Train the model
     logreg = train_Logistic(X_train, y_train, max_iter=1500, C=1, pen='l2', solver= 'lbfgs')

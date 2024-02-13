@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/3ae27c85b25343cb824059ce48b965d5/artifacts
+end_time: 1707844926958
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: 3ae27c85b25343cb824059ce48b965d5
+run_name: wistful-fox-536
+run_uuid: 3ae27c85b25343cb824059ce48b965d5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707844926541
+status: 3
+tags: []
+user_id: dumindu

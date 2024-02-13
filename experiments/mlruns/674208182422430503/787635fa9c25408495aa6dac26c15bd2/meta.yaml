@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/674208182422430503/787635fa9c25408495aa6dac26c15bd2/artifacts
+end_time: 1707856539525
+entry_point_name: ''
+experiment_id: '674208182422430503'
+lifecycle_stage: active
+run_id: 787635fa9c25408495aa6dac26c15bd2
+run_name: traveling-mule-407
+run_uuid: 787635fa9c25408495aa6dac26c15bd2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707856538725
+status: 3
+tags: []
+user_id: dumindu
