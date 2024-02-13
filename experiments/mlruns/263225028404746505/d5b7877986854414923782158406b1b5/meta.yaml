@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/263225028404746505/d5b7877986854414923782158406b1b5/artifacts
+end_time: 1707807841339
+entry_point_name: ''
+experiment_id: '263225028404746505'
+lifecycle_stage: active
+run_id: d5b7877986854414923782158406b1b5
+run_name: righteous-snake-708
+run_uuid: d5b7877986854414923782158406b1b5
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707807841208
+status: 3
+tags: []
+user_id: dumindu

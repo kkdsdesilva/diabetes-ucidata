@@ -51,7 +51,7 @@ def main():
             ]
 
     # Load and preprocess data
-    data = engineer_features(load_data())
+    data = engineer_features(load_data()[cols])
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
@@ -60,7 +60,7 @@ def main():
     #X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=2)
 
     # Train the model
-    dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=15, min_samples_split=7)
+    dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=1, min_samples_split=7)
 
     # Log model metrics to MLflow
     mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))

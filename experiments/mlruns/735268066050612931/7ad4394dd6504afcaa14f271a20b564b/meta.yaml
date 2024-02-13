@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/7ad4394dd6504afcaa14f271a20b564b/artifacts
+end_time: 1707809622928
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: 7ad4394dd6504afcaa14f271a20b564b
+run_name: tasteful-rook-24
+run_uuid: 7ad4394dd6504afcaa14f271a20b564b
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707809622820
+status: 3
+tags: []
+user_id: dumindu

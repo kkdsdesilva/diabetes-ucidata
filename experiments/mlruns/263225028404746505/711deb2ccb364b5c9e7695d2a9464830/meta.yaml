@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/263225028404746505/711deb2ccb364b5c9e7695d2a9464830/artifacts
+end_time: 1707808085838
+entry_point_name: ''
+experiment_id: '263225028404746505'
+lifecycle_stage: active
+run_id: 711deb2ccb364b5c9e7695d2a9464830
+run_name: wistful-sponge-400
+run_uuid: 711deb2ccb364b5c9e7695d2a9464830
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707808085719
+status: 3
+tags: []
+user_id: dumindu

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/263225028404746505/626c371474404f6d8cfca365e907f013/artifacts
+end_time: 1707808678604
+entry_point_name: ''
+experiment_id: '263225028404746505'
+lifecycle_stage: active
+run_id: 626c371474404f6d8cfca365e907f013
+run_name: dazzling-hen-942
+run_uuid: 626c371474404f6d8cfca365e907f013
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707808678458
+status: 3
+tags: []
+user_id: dumindu
