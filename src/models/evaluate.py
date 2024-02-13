@@ -16,6 +16,7 @@ def evaluate_model(model, X_train, X_test, y_train, y_test, metric='recall'):
         test_acc = accuracy_score(y_test, y_test_pred)
         
         # print the accuracy
+        print('-'*5+'Accuracy'+'-'*5)
         print('Train accuracy: ', train_acc)
         print('Test accuracy: ', test_acc)
 
@@ -32,6 +33,7 @@ def evaluate_model(model, X_train, X_test, y_train, y_test, metric='recall'):
         test_f1 = f1_score(y_test, y_test_pred)
         
         # print the accuracy
+        print('-'*5+'F1 Score'+'-'*5)
         print('Train f1: ', train_f1)
         print('Test f1: ', test_f1)
 
@@ -48,6 +50,7 @@ def evaluate_model(model, X_train, X_test, y_train, y_test, metric='recall'):
         test_recall = recall_score(y_test, y_test_pred)
         
         # print the accuracy
+        print('-'*5+'Recall'+'-'*5)
         print('Train recall: ', train_recall)
         print('Test recall: ', test_recall)
 

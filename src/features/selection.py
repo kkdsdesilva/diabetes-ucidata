@@ -22,7 +22,7 @@ def select_features(model, X_train, X_test, y_train, step=1, cv=5):
         model = RandomForestClassifier(n_jobs=-1)
 
     # create the RFECV model
-    selector = RFECV(model, step=step, cv=cv)
+    selector = RFECV(model, step=step, cv=cv, n_jobs=-1, scoring='recall')
 
     # fit the model
     selector = selector.fit(X_train, y_train)

@@ -42,7 +42,7 @@ def main():
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
 
     # pick the best features
-    X_train, X_test = select_features('DecisionTree', X_train, X_test, y_train)
+    #X_train, X_test = select_features('DecisionTree', X_train, X_test, y_train)
     
     # Train the model
     dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=15, min_samples_split=7)
