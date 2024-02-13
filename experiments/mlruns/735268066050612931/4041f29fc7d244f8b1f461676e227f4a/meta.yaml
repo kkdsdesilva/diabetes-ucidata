@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/4041f29fc7d244f8b1f461676e227f4a/artifacts
+end_time: 1707809702717
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: 4041f29fc7d244f8b1f461676e227f4a
+run_name: dapper-shoat-791
+run_uuid: 4041f29fc7d244f8b1f461676e227f4a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707809702617
+status: 3
+tags: []
+user_id: dumindu

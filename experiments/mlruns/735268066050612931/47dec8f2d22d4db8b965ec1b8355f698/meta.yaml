@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/47dec8f2d22d4db8b965ec1b8355f698/artifacts
+end_time: 1707767965437
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: 47dec8f2d22d4db8b965ec1b8355f698
+run_name: delightful-shrew-169
+run_uuid: 47dec8f2d22d4db8b965ec1b8355f698
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707767965329
+status: 3
+tags: []
+user_id: dumindu

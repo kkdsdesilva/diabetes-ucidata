@@ -16,7 +16,10 @@ from src.features.feature_labeling import label_encode, one_hot_encode
 def add_dtypes(data):
     '''Returns data with dtypes correctly assigned.'''
 
-    numeric_cols = ['time_in_hospital', 'num_lab_procedures', 'num_procedures', 'num_medications', 'number_outpatient', 'number_emergency', 'number_inpatient', 'number_diagnoses']
+    num_cols = ['time_in_hospital', 'num_lab_procedures', \
+                    'num_procedures', 'num_medications', 'number_outpatient', \
+                        'number_emergency', 'number_inpatient', 'number_diagnoses']
+    numeric_cols = [x for x in num_cols if x in data.columns]  
     categorical = data.columns.difference(numeric_cols)
 
     # assign dtypes to float to numeric columns
@@ -28,8 +31,10 @@ def add_dtypes(data):
     # return data
     return data
 
+
 # function to load the data
 def load_data(processed=True, weight=False):
+
     '''Returns the data.
     kind: bool: type of data to load (raw or processed)
     weight: bool: whether to include weight in the data
@@ -48,10 +53,14 @@ def load_data(processed=True, weight=False):
         else:
             data = pd.read_csv(root_dir+'/data/processed/diabetes_without_weight_cleaned.csv')
             return add_dtypes(data)
-        
+
+
+# label_data: Load and preprocess the dataset.
 def label_data(data):
     """Load and preprocess the dataset."""
     
+    # label encode the target variable
     data = label_encode(data, 'readmitted', {'NO': 0, '>30': 1, '<30': 1})
     data = one_hot_encode(data)
+
     return data

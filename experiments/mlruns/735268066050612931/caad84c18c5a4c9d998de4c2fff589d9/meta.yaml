@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/735268066050612931/caad84c18c5a4c9d998de4c2fff589d9/artifacts
+end_time: 1707775500046
+entry_point_name: ''
+experiment_id: '735268066050612931'
+lifecycle_stage: active
+run_id: caad84c18c5a4c9d998de4c2fff589d9
+run_name: learned-dove-382
+run_uuid: caad84c18c5a4c9d998de4c2fff589d9
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707775500020
+status: 3
+tags: []
+user_id: dumindu

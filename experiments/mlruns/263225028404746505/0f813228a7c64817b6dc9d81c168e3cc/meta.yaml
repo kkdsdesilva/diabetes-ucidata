@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/263225028404746505/0f813228a7c64817b6dc9d81c168e3cc/artifacts
+end_time: 1707808804932
+entry_point_name: ''
+experiment_id: '263225028404746505'
+lifecycle_stage: active
+run_id: 0f813228a7c64817b6dc9d81c168e3cc
+run_name: resilient-donkey-50
+run_uuid: 0f813228a7c64817b6dc9d81c168e3cc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707808804796
+status: 3
+tags: []
+user_id: dumindu

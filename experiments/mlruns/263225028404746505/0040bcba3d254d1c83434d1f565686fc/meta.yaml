@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/263225028404746505/0040bcba3d254d1c83434d1f565686fc/artifacts
+end_time: 1707774966971
+entry_point_name: ''
+experiment_id: '263225028404746505'
+lifecycle_stage: active
+run_id: 0040bcba3d254d1c83434d1f565686fc
+run_name: upset-skink-317
+run_uuid: 0040bcba3d254d1c83434d1f565686fc
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707774966854
+status: 3
+tags: []
+user_id: dumindu

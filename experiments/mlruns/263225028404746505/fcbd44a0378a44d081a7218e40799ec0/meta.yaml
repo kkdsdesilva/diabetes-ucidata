@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/263225028404746505/fcbd44a0378a44d081a7218e40799ec0/artifacts
+end_time: 1707810926822
+entry_point_name: ''
+experiment_id: '263225028404746505'
+lifecycle_stage: active
+run_id: fcbd44a0378a44d081a7218e40799ec0
+run_name: wise-worm-48
+run_uuid: fcbd44a0378a44d081a7218e40799ec0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707810926676
+status: 3
+tags: []
+user_id: dumindu

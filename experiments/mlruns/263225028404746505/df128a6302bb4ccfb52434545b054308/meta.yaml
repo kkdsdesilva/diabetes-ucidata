@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/263225028404746505/df128a6302bb4ccfb52434545b054308/artifacts
+end_time: 1707811514225
+entry_point_name: ''
+experiment_id: '263225028404746505'
+lifecycle_stage: active
+run_id: df128a6302bb4ccfb52434545b054308
+run_name: youthful-snipe-720
+run_uuid: df128a6302bb4ccfb52434545b054308
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707811513266
+status: 3
+tags: []
+user_id: dumindu

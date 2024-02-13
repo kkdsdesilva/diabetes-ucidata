@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/238550786735983475/fe7dfb26a5264ffabe70d3a60b754cad/artifacts
+end_time: 1707766188035
+entry_point_name: ''
+experiment_id: '238550786735983475'
+lifecycle_stage: active
+run_id: fe7dfb26a5264ffabe70d3a60b754cad
+run_name: adventurous-boar-633
+run_uuid: fe7dfb26a5264ffabe70d3a60b754cad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707766187889
+status: 3
+tags: []
+user_id: dumindu
