@@ -69,7 +69,7 @@ def data_encode(data, target, readmit_days=False, one_hot=False, cat_cols=None):
 
     else:
         # label the categorical features
-        data = target_encode(data, target, {'NO': 0, '>30': 0, '<30': 1})
+        data = target_encode(data, target, {'NO': 0, '>30': 1, '<30': 1})
 
     if one_hot:
         # one hot encode the categorical features
