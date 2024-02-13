@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/263225028404746505/0f8d62fe22d4414ba231b414e1427590/artifacts
+end_time: 1707811272378
+entry_point_name: ''
+experiment_id: '263225028404746505'
+lifecycle_stage: active
+run_id: 0f8d62fe22d4414ba231b414e1427590
+run_name: zealous-hare-26
+run_uuid: 0f8d62fe22d4414ba231b414e1427590
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707811271671
+status: 3
+tags: []
+user_id: dumindu

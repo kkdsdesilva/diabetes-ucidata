@@ -53,13 +53,13 @@ def main():
     data = engineer_features(load_data()[cols])
 
     # Split the data
-    X_train, X_test, y_train, y_test = split_data(data, 'readmitted', test_size=0.2)
+    X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
 
     # pick the best k features
     #X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=50)
 
     # Train the model
-    rf = train_RandomForest(X_train, y_train, n_estimators=100, max_depth=10, min_samples_split=4, random_state=123871263)
+    rf = train_RandomForest(X_train, y_train, n_estimators=500, max_depth=100, min_samples_split=7, random_state=121263)
 
     # Log model and metrics to MLflow
     mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))

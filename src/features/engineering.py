@@ -87,7 +87,7 @@ def engineer_features(data, readmit_days=False):
     data = change_diag_columns(data)
 
     # change the medication columns
-    #data = change_medication_columns(data)
+    data = change_medication_columns(data)
     
     # change the diag columns
     data = label_and_one_hot_encode(data, readmit_days=readmit_days)

@@ -45,13 +45,14 @@ def main():
     cols = ['race',  'gender', 'age', 'admission_type_id',
        'discharge_disposition_id', 'admission_source_id', 'time_in_hospital', 'payer_code', 
        'medical_specialty', 'num_lab_procedures',
-       'num_procedures', 'num_medications', 'number_outpatient',
-       'number_emergency', 'number_inpatient', 'diag_1', 'diag_2', 'diag_3',
-       'number_diagnoses', 'change', 'diabetesMed', 'readmitted' 
+       'num_procedures','number_inpatient', 'num_medications', 'number_outpatient',
+       'number_emergency',  'diag_1', 'diag_2', 'diag_3',
+       'number_diagnoses', 'change', 'diabetesMed', 
+       'readmitted' 
             ]
 
     # Load and preprocess data
-    data = engineer_features(load_data()[cols])
+    data = engineer_features(load_data())
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
@@ -60,7 +61,7 @@ def main():
     #X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=2)
 
     # Train the model
-    dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=1, min_samples_split=7)
+    dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=50, min_samples_split=7)
 
     # Log model metrics to MLflow
     mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))
