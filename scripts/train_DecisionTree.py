@@ -19,6 +19,7 @@ from src.data.split_data import split_data
 from src.models.DecisionTree import train_DecisionTree
 from src.models.evaluate import evaluate_model
 from src.models.log import log_model_metrics
+from src.visualization.roc import plot_roc
 
 
 def main():
@@ -45,7 +46,10 @@ def main():
     X_train, X_test = select_features('DecisionTree', X_train, X_test, y_train)
     
     # Train the model
-    dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=15, min_samples_split=7)
+    dtree = train_DecisionTree(X_train, y_train, criterion='gini', max_depth=10, min_samples_split=7)
+
+    # plot the roc curve
+    plot_roc(dtree, X_test, y_test)
 
     # Log model metrics to MLflow
     mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))

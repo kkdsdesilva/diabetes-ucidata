@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/674208182422430503/776ddde67b82485eb49b1985fada10cd/artifacts
+end_time: 1707868611994
+entry_point_name: ''
+experiment_id: '674208182422430503'
+lifecycle_stage: active
+run_id: 776ddde67b82485eb49b1985fada10cd
+run_name: rumbling-cat-601
+run_uuid: 776ddde67b82485eb49b1985fada10cd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707868611064
+status: 3
+tags: []
+user_id: dumindu

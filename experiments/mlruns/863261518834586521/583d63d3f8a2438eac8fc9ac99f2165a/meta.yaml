@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/863261518834586521/583d63d3f8a2438eac8fc9ac99f2165a/artifacts
+end_time: 1707867054659
+entry_point_name: ''
+experiment_id: '863261518834586521'
+lifecycle_stage: active
+run_id: 583d63d3f8a2438eac8fc9ac99f2165a
+run_name: bedecked-vole-470
+run_uuid: 583d63d3f8a2438eac8fc9ac99f2165a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707867054293
+status: 3
+tags: []
+user_id: dumindu

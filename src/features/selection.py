@@ -13,7 +13,7 @@ def select_features(model, X_train, X_test, y_train, step=1, cv=5):
     original_num_features = X_train.shape[1]
 
     if model == 'Logistic':
-        model = LogisticRegression()
+        model = LogisticRegression(max_iter=1500, n_jobs=-1)
     
     elif model == 'DecisionTree':
         model = DecisionTreeClassifier()

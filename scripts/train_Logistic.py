@@ -35,7 +35,7 @@ def main():
        'number_diagnoses', 'readmitted']
 
     # Load and preprocess data
-    data = engineer_features(load_data()[cols], 'readmitted', one_hot=True)
+    data = engineer_features(load_data(), 'readmitted', one_hot=True)
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
@@ -45,7 +45,7 @@ def main():
     X_test = standardize_data(X_test)
 
     # select the best features
-    #X_train, X_test = select_features('Logistic', X_train, X_test, y_train, step=100)
+    X_train, X_test = select_features('Logistic', X_train, X_test, y_train, step=50)
 
     # Train the model
     logreg = train_Logistic(X_train, y_train, max_iter=1500, C=1, pen='l2', solver= 'lbfgs')

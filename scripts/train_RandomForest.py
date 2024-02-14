@@ -16,9 +16,10 @@ from src.data.load_data import load_data
 from src.data.split_data import split_data
 from src.models.RandomForest import train_RandomForest
 from src.models.evaluate import evaluate_model
+from src.models.log import log_model_metrics
 from src.features.selection import select_features
 from src.features.engineering import engineer_features
-from src.models.log import log_model_metrics
+from src.visualization.roc import plot_roc
 
 
 def main():
@@ -45,6 +46,9 @@ def main():
     # Train the model
     rf = train_RandomForest(X_train, y_train, n_estimators=100, max_depth=20, min_samples_split=7, random_state=121263)
 
+    # plot the roc curve
+    plot_roc(rf, X_test, y_test)
+
     # Log model and metrics to MLflow
     mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))
 
@@ -54,7 +58,7 @@ def main():
     with mlflow.start_run():
 
         # Log model metrics
-        log_model_metrics(rf, X_train, X_test, y_train, y_test)
+        log_model_metrics(rf, X_train, X_test, y_train, y_test, predict_proba=True, threshold=0.3)
 
         # Log parameters
         mlflow.log_params({"n_estimators": rf.get_params()['n_estimators'], \
