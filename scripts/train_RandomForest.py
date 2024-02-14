@@ -16,26 +16,11 @@ from src.data.load_data import load_data
 from src.data.split_data import split_data
 from src.models.RandomForest import train_RandomForest
 from src.models.evaluate import evaluate_model
-from src.features.feature_importance import feature_importance_other, pick_top_k_features
-from src.features.engineering import engineer_features
 from src.models.log import log_model_metrics
+from src.features.selection import select_features
+from src.features.engineering import engineer_features
+from src.visualization.roc import plot_roc
 
-
-def pick_best_k_features(X_train, X_test, y_train, y_test, k):
-    """Pick the best number of features for the model."""
-    # train the model
-    model = train_RandomForest(X_train, y_train, n_estimators=100, max_depth=10, min_samples_split=4)
-
-    # get the feature importance
-    importance = feature_importance_other(model, X_train)
-
-    # pick the top k features
-    X_train_k = pick_top_k_features(X_train, importance, k)
-
-    # pick the top k features for the test set
-    X_test_k = X_test[X_train_k.columns]
-
-    return X_train_k, X_test_k
 
 def main():
     import warnings
@@ -50,16 +35,19 @@ def main():
        'number_diagnoses', 'readmitted']
 
     # Load and preprocess data
-    data = engineer_features(load_data()[cols])
+    data = engineer_features(load_data(), 'readmitted')
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
 
-    # pick the best k features
-    #X_train, X_test = pick_best_k_features(X_train, X_test, y_train, y_test, k=50)
+    # pick the best features
+    X_train, X_test = select_features('RandomForest', X_train, X_test, y_train)
 
     # Train the model
-    rf = train_RandomForest(X_train, y_train, n_estimators=500, max_depth=100, min_samples_split=7, random_state=121263)
+    rf = train_RandomForest(X_train, y_train, n_estimators=100, max_depth=20, min_samples_split=7, random_state=121263)
+
+    # plot the roc curve
+    plot_roc(rf, X_test, y_test)
 
     # Log model and metrics to MLflow
     mlflow.set_tracking_uri("file://" + os.path.join(cur_dir, '..', 'experiments', 'mlruns'))
@@ -70,7 +58,7 @@ def main():
     with mlflow.start_run():
 
         # Log model metrics
-        log_model_metrics(rf, X_train, X_test, y_train, y_test)
+        log_model_metrics(rf, X_train, X_test, y_train, y_test, predict_proba=True, threshold=0.3)
 
         # Log parameters
         mlflow.log_params({"n_estimators": rf.get_params()['n_estimators'], \

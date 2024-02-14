@@ -4,9 +4,10 @@
 
 # import libraries
 import pandas as pd
+from sklearn.preprocessing import LabelEncoder
 
-# label_encode: Returns the column with categorical features labeled and encoded.
-def label_encode(df, col, dic):
+# label encode the target variable
+def target_encode(df, col, dic):
     '''Returns the column with categorical features labeled and encoded.'''
     
     # copy of the dataframe
@@ -17,40 +18,71 @@ def label_encode(df, col, dic):
     # return the column
     return data
 
-
-# one hot encode the categorical features
-def one_hot_encode(data, cat_cols=None):
-    '''Returns the data with categorical features one hot encoded.'''
+# label encode the categorical features
+def label_encode(data, target, cat_cols=None):
+    '''Returns the data with categorical features labeled.'''
     
-    # one hot encode the categorical features
-    data = pd.get_dummies(data, columns=cat_cols, drop_first=True)
+        # label encode the categorical features
+    if cat_cols:
+        label_encoder = LabelEncoder()
+        for col in cat_cols:
+            data[col] = label_encoder.fit_transform(data[col])
+    
+    else:
+        # obtain the categorical columns
+        cat_cols = data.select_dtypes(include='object').columns
+
+        # remove the target column if it is in the list
+        if target in cat_cols:
+            cat_cols = cat_cols.drop(target)
+
+        label_encoder = LabelEncoder()
+        for col in cat_cols:
+            data[col] = label_encoder.fit_transform(data[col])
     
     # return the data
     return data
 
+# one hot encode the categorical features
+def one_hot_encode(data, target, cat_cols=None):
+    '''Returns the data with categorical features one hot encoded.'''
+    
+    # one hot encode the categorical features
+    data_encoded = pd.get_dummies(data.drop(columns=[target]), columns=cat_cols, drop_first=True)
 
-# label and one hot encode the data
-def label_and_one_hot_encode(data, readmit_days=False):
-    '''Returns the data with categorical features labeled and one hot encoded.
-    data: dataframe: the data
-    readmit_days: bool: whether to label encode the readmitted column with 3 classes'''
+    # add the target column to the dataframe
+    data_encoded[target] = data[target]
+    
+    # return the data
+    return data_encoded
+
+
+
+# label and encode the data
+def data_encode(data, target, readmit_days=False, one_hot=False, cat_cols=None):
+    '''Returns the data with the categorical features labeled and encoded.'''
 
     # readmit_days: whether to label encode the readmitted column with 3 classes
     if readmit_days:
         # label the categorical features
-        data = label_encode(data, 'readmitted', {'NO': 0, '>30': 1, '<30': 2})
+        data = target_encode(data, target, {'NO': 0, '>30': 1, '<30': 2})
 
     else:
         # label the categorical features
-        data = label_encode(data, 'readmitted', {'NO': 0, '>30': 0, '<30': 1})
+        data = target_encode(data, target, {'NO': 0, '>30': 1, '<30': 1})
+
+    if one_hot:
+        # one hot encode the categorical features
+        data = one_hot_encode(data, target, cat_cols=cat_cols)
     
-    # one hot encode the categorical features
-    data = one_hot_encode(data)
+    else:
+        # label encode the categorical features
+        data = label_encode(data, target, cat_cols=cat_cols)
 
     # return the data
     return data
 
-
+# change the diag columns
 def change_diag_columns(data):
     '''Returns the data with the diag_1, diag_2 or diag_3 columns changed if either one exist.'''
 
@@ -61,6 +93,7 @@ def change_diag_columns(data):
     # return the data
     return data
 
+# change the medication columns
 def change_medication_columns(data):
     col = ['metformin',
        'repaglinide', 'nateglinide', 'chlorpropamide', 'glimepiride',
@@ -79,8 +112,8 @@ def change_medication_columns(data):
     return data
 
 
-
-def engineer_features(data, readmit_days=False):
+# engineer the features
+def engineer_features(data, target, readmit_days=False, one_hot=False):
     '''Returns the data with engineered features.'''
 
     # change the diag columns
@@ -88,9 +121,13 @@ def engineer_features(data, readmit_days=False):
 
     # change the medication columns
     data = change_medication_columns(data)
+
+    # label and one hot encode the data
+    data = data_encode(data, target, readmit_days=readmit_days, one_hot=one_hot)
     
-    # change the diag columns
-    data = label_and_one_hot_encode(data, readmit_days=readmit_days)
+    print('-'*20)
+    print('Feature engineering complete.')
+    print('-'*20)
     
     # return the data
     return data

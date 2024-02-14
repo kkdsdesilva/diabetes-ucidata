@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/d7b1106783a74ce0ac9305d375a56aad/artifacts
+end_time: 1707863611617
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: d7b1106783a74ce0ac9305d375a56aad
+run_name: aged-finch-889
+run_uuid: d7b1106783a74ce0ac9305d375a56aad
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707863611508
+status: 3
+tags: []
+user_id: dumindu

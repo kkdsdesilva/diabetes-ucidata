@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/0a7c08fd4cb641e6aaaacbd1087ef255/artifacts
+end_time: 1707868139236
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: 0a7c08fd4cb641e6aaaacbd1087ef255
+run_name: incongruous-wasp-123
+run_uuid: 0a7c08fd4cb641e6aaaacbd1087ef255
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707868139095
+status: 3
+tags: []
+user_id: dumindu

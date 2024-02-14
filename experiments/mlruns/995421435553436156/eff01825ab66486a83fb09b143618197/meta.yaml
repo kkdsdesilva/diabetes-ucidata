@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/eff01825ab66486a83fb09b143618197/artifacts
+end_time: 1707867950055
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: eff01825ab66486a83fb09b143618197
+run_name: stately-turtle-998
+run_uuid: eff01825ab66486a83fb09b143618197
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707867949922
+status: 3
+tags: []
+user_id: dumindu

@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/f802edce569449ec84da393979f0dbf0/artifacts
+end_time: 1707864867357
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: f802edce569449ec84da393979f0dbf0
+run_name: fortunate-eel-502
+run_uuid: f802edce569449ec84da393979f0dbf0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707864867236
+status: 3
+tags: []
+user_id: dumindu

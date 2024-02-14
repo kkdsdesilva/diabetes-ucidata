@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/ce8a761a01674b2ca443a9949f8993d2/artifacts
+end_time: 1707863618292
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: ce8a761a01674b2ca443a9949f8993d2
+run_name: abrasive-finch-176
+run_uuid: ce8a761a01674b2ca443a9949f8993d2
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707863618187
+status: 3
+tags: []
+user_id: dumindu

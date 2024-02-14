@@ -11,8 +11,22 @@ sys.path.append(root_dir)
 
 from src.models.evaluate import evaluate_model
 
-def log_model_metrics(model, X_train, X_test, y_train, y_test):
+def log_model_metrics(model, X_train, X_test, y_train, y_test, predict_proba=False, threshold=0.5):
     """Log model metrics to MLflow."""
-    train_acc, test_acc = evaluate_model(model, X_train, X_test, y_train, y_test)
+    # evaluate the model
+    train_acc, test_acc = evaluate_model(model, X_train, X_test, y_train, y_test, metric='accuracy', \
+                                         predict_proba=predict_proba, threshold=threshold)
+    train_recall, test_recall = evaluate_model(model, X_train, X_test, y_train, y_test, metric='recall', \
+                                               predict_proba=predict_proba, threshold=threshold)
+    train_f1, test_f1 = evaluate_model(model, X_train, X_test, y_train, y_test, metric='f1', \
+                                       predict_proba=predict_proba, threshold=threshold)
+    roc_auc = evaluate_model(model, X_train, X_test, y_train, y_test, metric='roc_auc')
+
+    # log the metrics
     mlflow.log_metric("train_accuracy", train_acc)
     mlflow.log_metric("test_accuracy", test_acc)
+    mlflow.log_metric("train_recall", train_recall)
+    mlflow.log_metric("test_recall", test_recall)
+    mlflow.log_metric("train_f1", train_f1)
+    mlflow.log_metric("test_f1", test_f1)
+    

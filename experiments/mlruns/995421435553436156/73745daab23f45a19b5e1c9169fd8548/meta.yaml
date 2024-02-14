@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/73745daab23f45a19b5e1c9169fd8548/artifacts
+end_time: 1707853592973
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: 73745daab23f45a19b5e1c9169fd8548
+run_name: ambitious-smelt-844
+run_uuid: 73745daab23f45a19b5e1c9169fd8548
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707853592880
+status: 3
+tags: []
+user_id: dumindu

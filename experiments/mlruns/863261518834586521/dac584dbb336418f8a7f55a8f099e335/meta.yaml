@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/863261518834586521/dac584dbb336418f8a7f55a8f099e335/artifacts
+end_time: 1707865736208
+entry_point_name: ''
+experiment_id: '863261518834586521'
+lifecycle_stage: active
+run_id: dac584dbb336418f8a7f55a8f099e335
+run_name: efficient-sheep-736
+run_uuid: dac584dbb336418f8a7f55a8f099e335
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707865735672
+status: 3
+tags: []
+user_id: dumindu

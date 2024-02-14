@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/0f41115960a94add9467c033f25db98d/artifacts
+end_time: 1707845275245
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: 0f41115960a94add9467c033f25db98d
+run_name: painted-trout-654
+run_uuid: 0f41115960a94add9467c033f25db98d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707845275157
+status: 3
+tags: []
+user_id: dumindu

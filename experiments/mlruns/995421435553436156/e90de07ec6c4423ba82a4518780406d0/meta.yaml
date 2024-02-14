@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/e90de07ec6c4423ba82a4518780406d0/artifacts
+end_time: 1707864648751
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: e90de07ec6c4423ba82a4518780406d0
+run_name: fortunate-moose-1000
+run_uuid: e90de07ec6c4423ba82a4518780406d0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707864648623
+status: 3
+tags: []
+user_id: dumindu

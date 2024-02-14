@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/674208182422430503/3329da9b69ce4178a84f6800acf9eaf0/artifacts
+end_time: 1707856579519
+entry_point_name: ''
+experiment_id: '674208182422430503'
+lifecycle_stage: active
+run_id: 3329da9b69ce4178a84f6800acf9eaf0
+run_name: agreeable-whale-903
+run_uuid: 3329da9b69ce4178a84f6800acf9eaf0
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707856578910
+status: 3
+tags: []
+user_id: dumindu

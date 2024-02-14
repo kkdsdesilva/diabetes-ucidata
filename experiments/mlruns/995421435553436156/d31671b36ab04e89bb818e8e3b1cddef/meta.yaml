@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/d31671b36ab04e89bb818e8e3b1cddef/artifacts
+end_time: 1707853364396
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: d31671b36ab04e89bb818e8e3b1cddef
+run_name: bouncy-toad-36
+run_uuid: d31671b36ab04e89bb818e8e3b1cddef
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707853364310
+status: 3
+tags: []
+user_id: dumindu
