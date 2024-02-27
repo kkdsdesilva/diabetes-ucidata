@@ -13,6 +13,7 @@ from src.models.evaluate import evaluate_model
 
 def log_model_metrics(model, X_train, X_test, y_train, y_test, predict_proba=False, threshold=0.5):
     """Log model metrics to MLflow."""
+
     # evaluate the model
     train_acc, test_acc = evaluate_model(model, X_train, X_test, y_train, y_test, metric='accuracy', \
                                          predict_proba=predict_proba, threshold=threshold)

@@ -10,7 +10,7 @@ cur_dir = os.path.dirname(os.path.abspath(__file__))
 root_dir = os.path.join(cur_dir, '../../')
 sys.path.append(root_dir)
 
-from src.features.feature_labeling import label_encode, one_hot_encode
+from src.features.labeling import label_encode, one_hot_encode
 
 # add_dtypes: Assigns dtypes to the columns of the dataframe.
 def add_dtypes(data):

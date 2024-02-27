@@ -43,7 +43,7 @@ def main():
     # pick the best features
     #X_train, X_test = select_features('RandomForest', X_train, X_test, y_train)
 
-    # Train the model
+    # train the model
     rf = train_RandomForest(X_train, y_train, n_estimators=100, max_depth=20, min_samples_split=7, random_state=121263)
 
     # plot the roc curve
@@ -67,6 +67,7 @@ def main():
                         "min_samples_leaf": rf.get_params()['min_samples_leaf'], \
                         "criterion": rf.get_params()['criterion'], \
                         "number of features": X_train.shape[1]})
+
         
 if __name__ == "__main__":
     main()
