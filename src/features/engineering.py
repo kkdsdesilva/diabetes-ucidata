@@ -57,7 +57,6 @@ def one_hot_encode(data, target, cat_cols=None):
     return data_encoded
 
 
-
 # label and encode the data
 def data_encode(data, target, readmit_days=False, one_hot=False, cat_cols=None):
     '''Returns the data with the categorical features labeled and encoded.'''

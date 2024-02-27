@@ -38,10 +38,10 @@ def main():
     data = engineer_features(load_data(), 'readmitted')
 
     # Split the data
-    X_train, X_test, y_train, y_test = split_data(data, 'readmitted')
+    X_train, X_test, y_train, y_test = split_data(data, 'readmitted', test_size=0.1)
 
     # pick the best features
-    X_train, X_test = select_features('RandomForest', X_train, X_test, y_train)
+    #X_train, X_test = select_features('RandomForest', X_train, X_test, y_train)
 
     # Train the model
     rf = train_RandomForest(X_train, y_train, n_estimators=100, max_depth=20, min_samples_split=7, random_state=121263)
