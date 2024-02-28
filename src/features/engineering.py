@@ -50,6 +50,9 @@ def one_hot_encode(data, target, cat_cols=None):
     # one hot encode the categorical features
     data_encoded = pd.get_dummies(data.drop(columns=[target]), columns=cat_cols, drop_first=True)
 
+    # convert to float64
+    data_encoded = data_encoded.astype('float64')
+
     # add the target column to the dataframe
     data_encoded[target] = data[target]
     

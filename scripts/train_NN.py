@@ -32,7 +32,7 @@ def main():
        'number_diagnoses', 'readmitted']
 
     # Load and preprocess data
-    data = engineer_features(load_data()[cols], 'readmitted')
+    data = engineer_features(load_data(), 'readmitted', one_hot=True)
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted', test_size=0.1)
