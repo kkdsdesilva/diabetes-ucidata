@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/5a9a1c15bdca4453b09879bb68945cde/artifacts
+end_time: 1707853038559
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: 5a9a1c15bdca4453b09879bb68945cde
+run_name: awesome-ant-797
+run_uuid: 5a9a1c15bdca4453b09879bb68945cde
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707853038473
+status: 3
+tags: []
+user_id: dumindu

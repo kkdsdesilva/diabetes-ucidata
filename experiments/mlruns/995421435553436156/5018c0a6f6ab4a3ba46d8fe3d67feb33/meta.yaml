@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/5018c0a6f6ab4a3ba46d8fe3d67feb33/artifacts
+end_time: 1707853219718
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: 5018c0a6f6ab4a3ba46d8fe3d67feb33
+run_name: defiant-fish-578
+run_uuid: 5018c0a6f6ab4a3ba46d8fe3d67feb33
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707853219626
+status: 3
+tags: []
+user_id: dumindu

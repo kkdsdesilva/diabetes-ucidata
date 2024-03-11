@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/674208182422430503/9c9193a39f584e44a6968440941b963a/artifacts
+end_time: 1709070928451
+entry_point_name: ''
+experiment_id: '674208182422430503'
+lifecycle_stage: active
+run_id: 9c9193a39f584e44a6968440941b963a
+run_name: upset-horse-417
+run_uuid: 9c9193a39f584e44a6968440941b963a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1709070927528
+status: 3
+tags: []
+user_id: dumindu

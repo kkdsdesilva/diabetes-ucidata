@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/afa1adb22a564ccdab8693fe07dd620d/artifacts
+end_time: 1707864664498
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: afa1adb22a564ccdab8693fe07dd620d
+run_name: bustling-gnat-898
+run_uuid: afa1adb22a564ccdab8693fe07dd620d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707864664365
+status: 3
+tags: []
+user_id: dumindu

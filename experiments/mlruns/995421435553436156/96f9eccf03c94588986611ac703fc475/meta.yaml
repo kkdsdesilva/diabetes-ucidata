@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/96f9eccf03c94588986611ac703fc475/artifacts
+end_time: 1707868322702
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: 96f9eccf03c94588986611ac703fc475
+run_name: stylish-rat-594
+run_uuid: 96f9eccf03c94588986611ac703fc475
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707868322592
+status: 3
+tags: []
+user_id: dumindu

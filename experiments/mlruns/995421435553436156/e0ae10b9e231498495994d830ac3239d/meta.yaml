@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/e0ae10b9e231498495994d830ac3239d/artifacts
+end_time: 1707864721804
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: e0ae10b9e231498495994d830ac3239d
+run_name: salty-midge-300
+run_uuid: e0ae10b9e231498495994d830ac3239d
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707864721672
+status: 3
+tags: []
+user_id: dumindu

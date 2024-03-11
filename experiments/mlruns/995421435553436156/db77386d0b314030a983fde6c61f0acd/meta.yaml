@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/db77386d0b314030a983fde6c61f0acd/artifacts
+end_time: 1707853436868
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: db77386d0b314030a983fde6c61f0acd
+run_name: powerful-sloth-10
+run_uuid: db77386d0b314030a983fde6c61f0acd
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707853436765
+status: 3
+tags: []
+user_id: dumindu

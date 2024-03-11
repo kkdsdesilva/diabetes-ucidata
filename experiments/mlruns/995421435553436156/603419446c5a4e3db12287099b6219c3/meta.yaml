@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/603419446c5a4e3db12287099b6219c3/artifacts
+end_time: 1707863517324
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: 603419446c5a4e3db12287099b6219c3
+run_name: abundant-snake-874
+run_uuid: 603419446c5a4e3db12287099b6219c3
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707863517233
+status: 3
+tags: []
+user_id: dumindu

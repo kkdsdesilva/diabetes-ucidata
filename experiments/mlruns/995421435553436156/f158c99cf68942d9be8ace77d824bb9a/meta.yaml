@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/f158c99cf68942d9be8ace77d824bb9a/artifacts
+end_time: 1707863644111
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: f158c99cf68942d9be8ace77d824bb9a
+run_name: skillful-roo-628
+run_uuid: f158c99cf68942d9be8ace77d824bb9a
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707863644008
+status: 3
+tags: []
+user_id: dumindu

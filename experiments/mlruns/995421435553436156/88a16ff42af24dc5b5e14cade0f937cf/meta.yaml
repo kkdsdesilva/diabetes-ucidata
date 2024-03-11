@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/dumindu/Documents/Repositories/diabetes-ucidata/scripts/../experiments/mlruns/995421435553436156/88a16ff42af24dc5b5e14cade0f937cf/artifacts
+end_time: 1707863997733
+entry_point_name: ''
+experiment_id: '995421435553436156'
+lifecycle_stage: active
+run_id: 88a16ff42af24dc5b5e14cade0f937cf
+run_name: mysterious-calf-224
+run_uuid: 88a16ff42af24dc5b5e14cade0f937cf
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1707863997606
+status: 3
+tags: []
+user_id: dumindu
