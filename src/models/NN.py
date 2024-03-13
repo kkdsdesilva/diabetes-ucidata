@@ -8,8 +8,6 @@ from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.metrics import AUC
 from tensorflow.keras.metrics import Recall
 
-import tensorflow as tf
-
     
 
 def train_NN(layers_config, X_train, y_train, input_dim, n_ini=64, epochs=10, batch_size=32, validation_split=0.1, learning_rate=0.01):
