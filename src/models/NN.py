@@ -7,6 +7,7 @@ from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.metrics import AUC
 from tensorflow.keras.metrics import Recall
+from tensorflow.keras.callbacks import EarlyStopping
 from tqdm.keras import TqdmCallback
 
     
@@ -29,10 +30,15 @@ def train_NN(layers_config, X_train, y_train, input_dim, n_ini=64, epochs=10, ba
         model.add(Dense(units, activation=activation))
     
     model.add(Dense(1, activation='sigmoid'))  # Example output layer
-    model.compile(optimizer=Adam(learning_rate=0.01), loss='binary_crossentropy', metrics=['accuracy'])
+    model.compile(optimizer=Adam(learning_rate=0.01), loss='binary_crossentropy', metrics=['accuracy', Recall(name='recall')])
 
     # train the model
-    history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_split=validation_split, verbose=0,callbacks=[TqdmCallback(verbose=1)])
+    history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_split=validation_split, verbose=0,
+                        callbacks=[TqdmCallback(verbose=1)])
+    
+    #early_stopping = EarlyStopping(monitor='val_recall', mode='max', patience=5, restore_best_weights=True)
+   # history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_split=validation_split, verbose=0,
+   #                     callbacks=[TqdmCallback(verbose=1), early_stopping])
 
     # return the model
     return model, history
