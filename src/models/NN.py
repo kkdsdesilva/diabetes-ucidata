@@ -1,7 +1,7 @@
 # neural network
 
 import tensorflow as tf
-from tensorflow.keras import layers, models
+from tensorflow.keras import layers, models, regularizers
 from tensorflow.keras.models import Sequential
 from tensorflow.keras.layers import Dense
 from tensorflow.keras.optimizers import Adam
@@ -23,11 +23,15 @@ def train_NN(layers_config, X_train, y_train, input_dim, n_ini=64, epochs=10, ba
     n_ini: Number of units in the first layer.
 
     """
-    model = tf.keras.Sequential()
-    model.add(Dense(n_ini, input_dim=input_dim, activation='relu'))
 
+    # Define the L2 regularization factor
+    l2_regularizer = regularizers.l2(l=0.01)
+
+    model = tf.keras.Sequential()
+    model.add(Dense(n_ini, input_dim=input_dim, activation='relu',kernel_regularizer=l2_regularizer))
+    
     for units, activation in layers_config:
-        model.add(Dense(units, activation=activation))
+        model.add(Dense(units, activation=activation, kernel_regularizer=l2_regularizer))
     
     model.add(Dense(1, activation='sigmoid'))  # Example output layer
 

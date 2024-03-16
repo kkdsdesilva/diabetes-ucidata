@@ -1,0 +1,7 @@
+ROC AUC: 0.5824695584748744
+F1 Score: 0.6595179636217868
+Recall: 0.9353990476867315
+True Negatives: 3778
+False Positives: 12681
+False Negatives: 909
+True Positives: 13162
