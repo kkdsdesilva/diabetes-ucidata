@@ -18,7 +18,7 @@ from src.data.split_data import split_data
 from src.features.selection import select_features
 from src.data.data_scaling import standardize_data, normalize_data
 from src.features.engineering import engineer_features
-from src.visualization.roc import plot_roc
+from src.visualization.NN_visualization import plot_metrics
 
 def main():
     import warnings
@@ -33,7 +33,7 @@ def main():
        'number_diagnoses', 'readmitted']
 
     # Load and preprocess data
-    data = engineer_features(load_data(), 'readmitted', one_hot=True)
+    data = engineer_features(load_data()[cols], 'readmitted', one_hot=True)
 
     # Split the data
     X_train, X_test, y_train, y_test = split_data(data, 'readmitted', test_size=0.1)
@@ -43,21 +43,21 @@ def main():
     X_test = standardize_data(X_test)
 
     # train the model
-    nn, history = train_NN(X_train, y_train, input_dim=X_train.shape[1], epochs=50, batch_size=32, validation_split=0.1, learning_rate=0.001)
+    nn, history = train_NN(X_train, y_train, input_dim=X_train.shape[1], epochs=30, batch_size=32, validation_split=0.1, learning_rate=0.001)
 
-    # plot the roc curve
-    #plot_roc(nn, X_test, y_test)
+    # plot and save
+    #plot_metrics(history, 'reports/figures/NN_roc.png')
 
     # print recall and auc
-    print("Accuracy: ", history.history['accuracy'][-1])
-    print("Recall: ", history.history['recall'][-1])
-    print("AUC: ", history.history['auc'][-1])
+    print("Accuracy: ", history.history['val_accuracy'][-1])
+    print("Recall: ", history.history['val_recall'][-1])
+    print("AUC: ", history.history['val_auc'][-1])
 
     # plot accuracy, recall and auc
     import matplotlib.pyplot as plt
-    plt.plot(history.history['accuracy'], label='accuracy')
-    plt.plot(history.history['recall'], label='recall')
-    plt.plot(history.history['auc'], label='auc')
+    plt.plot(history.history['val_accuracy'], label='accuracy')
+    plt.plot(history.history['val_recall'], label='recall')
+    plt.plot(history.history['val_auc'], label='auc')
     plt.xlabel('Epoch')
     plt.ylabel('Score')
     plt.legend()

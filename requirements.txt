@@ -7,3 +7,5 @@ tensorflow
 tqdm
 mlflow
 git
+pydot
+graphviz
