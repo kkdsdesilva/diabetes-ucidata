@@ -15,10 +15,10 @@ def train_NN(X_train, y_train, input_dim, epochs=10, batch_size=32, validation_s
     
     # create the neural network model
     model = Sequential()
-    model.add(Dense(64, input_dim=input_dim, activation='relu', kernel_regularizer=regularizers.l2(0.01)))
+    model.add(Dense(16, input_dim=input_dim, activation='relu')) #, kernel_regularizer=regularizers.l2(0.01)))
     #model.add(Dense(64, activation='relu'))
     #model.add(Dense(32, activation='relu'))
-    model.add(Dense(32, activation='relu'))
+    model.add(Dense(8, activation='relu'))
     model.add(Dense(1, activation='sigmoid'))
     
     # optimizer
