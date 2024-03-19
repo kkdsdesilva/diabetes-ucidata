@@ -12,7 +12,8 @@ from tqdm.keras import TqdmCallback
 
     
 
-def train_NN(layers_config, X_train, y_train, input_dim, n_ini=64, epochs=10, batch_size=32, validation_split=0.1, lr=['constant',0.01]):
+def train_NN(layers_config, X_train, y_train, input_dim, n_ini=64, epochs=10, batch_size=32, validation_split=0.1, 
+             lr=['constant',0.01], regularize=False):
     """
     Create a sequential model based on the provided layers configuration.
 
@@ -25,7 +26,7 @@ def train_NN(layers_config, X_train, y_train, input_dim, n_ini=64, epochs=10, ba
     """
 
     # Define the L2 regularization factor
-    l2_regularizer = regularizers.l2(l=0.01)
+    l2_regularizer = regularizers.l2(l=0.01) if regularize else None
 
     model = tf.keras.Sequential()
     model.add(Dense(n_ini, input_dim=input_dim, activation='relu',kernel_regularizer=l2_regularizer))

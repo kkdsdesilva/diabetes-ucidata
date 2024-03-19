@@ -22,7 +22,7 @@ def plot_roc(model, X_test, y_test):
     roc_auc = auc(fpr, tpr)
     
     # plot the roc curve
-    plt.figure(figsize=(10, 6))
+    fig = plt.figure(figsize=(10, 6))
     plt.plot(fpr, tpr, label='ROC curve')
     plt.plot([0, 1], [0, 1], 'k--')
 
@@ -37,7 +37,7 @@ def plot_roc(model, X_test, y_test):
     # show the auc score
     plt.text(0.6, 0.2, 'AUC: '+str(round(roc_auc, 2)), fontsize=12)
     
-    plt.show()
+    return fig
 
 
 def metrics(model, X_test, y_test, new_threshold = 0.5):

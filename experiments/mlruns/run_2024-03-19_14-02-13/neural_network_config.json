@@ -1,0 +1,5 @@
+{
+    "hyperparameters": {
+        "learning_rate": [
+            "varying",
+            
