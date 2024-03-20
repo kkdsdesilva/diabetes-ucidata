@@ -14,7 +14,13 @@ from src.data.split_data import split_data
 from src.data.data_scaling import standardize_data, normalize_data
 from src.features.engineering import engineer_features
 from sklearn.model_selection import train_test_split
+import numpy as np
+import random
+import tensorflow as tf
 
+tf.random.set_seed(42)
+np.random.seed(42)
+random.seed(42)
 
 # select columns to use
 cols = ['race', 'gender', 'age', 'admission_type_id',
@@ -44,11 +50,9 @@ X_test_rf, y_test_rf = test_rf.drop(columns='readmitted'), test_rf['readmitted']
 X_train_nn = standardize_data(X_train_nn)
 X_test_nn = standardize_data(X_test_nn)
 
-X_train_rf = standardize_data(X_train_rf)
-X_test_rf = standardize_data(X_test_rf)
 
 # train random forest model
-rf = train_RandomForest(X_train_rf, y_train_rf, n_estimators=100, max_depth=5, min_samples_split=2, min_samples_leaf=1, random_state=0, criterion='gini')
+rf = train_RandomForest(X_train_rf, y_train_rf, n_estimators=50, max_depth=5, min_samples_split=2, min_samples_leaf=1, random_state=6, criterion='gini')
 
 # train neural network model
 nn, history = train_NN(X_train_nn, y_train_nn, input_dim=X_train_nn.shape[1], epochs=10, batch_size=32, validation_split=0, learning_rate=0.01)
@@ -61,7 +65,7 @@ y_pred_nn = (nn.predict(X_test_nn) > 0.5).astype('int32').reshape(-1)
 
 # use both models to predict. If at least one model predict 1, then the ensemble model predicts 1, else 0
 y_pred_ensemble = (y_pred_rf + y_pred_nn) > 0
-y_pred_ensemble = 
+#y_pred_ensemble = 
 
 
 # print the accuracy of the ensemble model
