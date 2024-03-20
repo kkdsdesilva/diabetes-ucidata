@@ -1,0 +1,14 @@
+{
+    "hyperparameters": {
+        "learning_rate": 0.0001,
+        "epochs": 1000,
+        "batch_size": 32,
+        "regularization": true
+    },
+    "layers": [
+        [
+            32,
+            "relu"
+        ]
+    ]
+}
