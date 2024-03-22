@@ -95,6 +95,7 @@ def change_diag_columns(data):
     # return the data
     return data
 
+
 # change the medication columns
 def change_medication_columns(data):
     col = ['metformin',
