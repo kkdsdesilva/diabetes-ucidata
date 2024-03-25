@@ -65,7 +65,6 @@ y_pred_nn = (nn.predict(X_test_nn) > 0.5).astype('int32').reshape(-1)
 
 # use both models to predict. If at least one model predict 1, then the ensemble model predicts 1, else 0
 y_pred_ensemble = (y_pred_rf + y_pred_nn) > 0
-#y_pred_ensemble = 
 
 
 # print the accuracy of the ensemble model
