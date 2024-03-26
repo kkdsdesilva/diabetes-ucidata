@@ -13,7 +13,7 @@ root_dir = os.path.join(cur_dir, '../')
 sys.path.append(root_dir)
 
 from src.data.load_data import load_data
-from src.models.NN import train_NN
+from src.models.NN import create_nn, train_nn 
 from src.data.split_data import split_data
 from src.features.selection import select_features
 from src.data.data_scaling import standardize_data, normalize_data
@@ -42,8 +42,14 @@ def main():
     X_train = standardize_data(X_train)
     X_test = standardize_data(X_test)
 
+    # create the neural network model
+    nn = create_nn(input_dim=X_train.shape[1], learning_rate=0.01, hidden_layers=5, config=[64, 32, 32, 32, 8], \
+                    activations=['relu', 'relu', 'relu', 'relu', 'sigmoid'], \
+                        l2_reg=[False, True, True, True, False], l2_lambda=[0.01, 0.01, 0.01, 0.1])
+    
     # train the model
-    nn, history = train_NN(X_train, y_train, input_dim=X_train.shape[1], epochs=30, batch_size=32, validation_split=0.1, learning_rate=0.001)
+    nn, history = train_nn(nn, X_train, y_train, epochs=30, batch_size=256, validation_split=0.1)
+
 
     # plot and save
     #plot_metrics(history, 'reports/figures/NN_roc.png')
