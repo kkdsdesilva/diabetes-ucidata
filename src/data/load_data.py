@@ -48,10 +48,10 @@ def load_data(processed=True, weight=False):
     elif processed:
         # load the processed data
         if weight:
-            data = pd.read_csv(root_dir+'/data/processed/diabetes_with_weight_cleaned.csv')
+            data = pd.read_csv(root_dir+'/data/preprocessed/diabetes_with_weight_cleaned.csv')
             return add_dtypes(data)
         else:
-            data = pd.read_csv(root_dir+'/data/processed/diabetes_without_weight_cleaned.csv')
+            data = pd.read_csv(root_dir+'/data/preprocessed/diabetes_without_weight_cleaned.csv')
             return add_dtypes(data)
 
 

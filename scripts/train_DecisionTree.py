@@ -33,8 +33,7 @@ def main():
        'num_procedures','number_inpatient', 'num_medications', 'number_outpatient',
        'number_emergency',  'diag_1', 'diag_2', 'diag_3',
        'number_diagnoses', 'change', 'diabetesMed', 
-       'readmitted' 
-            ]
+       'readmitted' ]
 
     # Load and preprocess data
     data = engineer_features(load_data(), 'readmitted')

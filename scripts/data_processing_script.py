@@ -28,12 +28,15 @@ def main():
     data_with_weight = data_w_weight(data)
 
     #impute data
+    #data_with_weight.loc[:, 'A1Cresult'] = data_with_weight['A1Cresult'].fillna(0).map({'Norm': 1, '>7': 1, '>8': 1, 0:0}) # impute and encode A1Cresult
+    data_without_weight.loc[:, 'A1Cresult'] = data_without_weight['A1Cresult'].fillna(0).map({'Norm': 1, '>7': 2, '>8': 3, 0: 0}) # impute and encode A1Cresult
+
+    #data_with_weight_imputed = impute_data(data_with_weight)
     data_without_weight_imputed = impute_data(data_without_weight)
-    data_with_weight_imputed = impute_data(data_with_weight)
 
     # save data
     save_data(data_without_weight_imputed, root_dir+'/data/preprocessed', 'diabetes_without_weight_cleaned.csv')
-    save_data(data_with_weight_imputed, root_dir+'/data/preprocessed', 'diabetes_with_weight_cleaned.csv')
+    #save_data(data_with_weight_imputed, root_dir+'/data/preprocessed', 'diabetes_with_weight_cleaned.csv')
 
 
 if __name__ == '__main__':

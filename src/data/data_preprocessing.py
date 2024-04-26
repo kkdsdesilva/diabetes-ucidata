@@ -20,6 +20,7 @@ def add_dtypes(data):
     # return data
     return data
 
+
 # data_wo_weight: Returns data with weight column removed.
 def data_wo_weight(data):
     '''Returns data with weight column removed.'''
@@ -30,6 +31,7 @@ def data_wo_weight(data):
     # return data
     return data
 
+
 # data_w_weight: Returns values where weight values are present.
 def data_w_weight(data):
     '''Returns values where weight values are present.'''
@@ -39,6 +41,7 @@ def data_w_weight(data):
 
     # return data
     return data
+
 
 # impute_data: Returns data with missing values imputed.
 def impute_data(data):
@@ -55,11 +58,13 @@ def impute_data(data):
 
     # impute missing values
     imputer = SimpleImputer(strategy='most_frequent')
-    data_copy.loc[:, cat_cols] = imputer.fit_transform(data[cat_cols])
+    imputed_cat_data = imputer.fit_transform(data[cat_cols])
+    data_copy.loc[:, cat_cols] = imputed_cat_data
 
     # impute missing values
     imputer = SimpleImputer(strategy='mean')
-    data_copy.loc[:, num_cols] = imputer.fit_transform(data[num_cols])
+    imputed_num_data = imputer.fit_transform(data[num_cols])
+    data_copy.loc[:, num_cols] = imputed_num_data
 
     # return data
     return data_copy
