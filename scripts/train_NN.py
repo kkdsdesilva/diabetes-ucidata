@@ -30,7 +30,7 @@ def main():
        'payer_code', 'medical_specialty', 'num_lab_procedures',
        'num_procedures', 'num_medications', 'number_outpatient',
        'number_emergency', 'number_inpatient', 'diag_1', 'diag_2', 'diag_3',
-       'number_diagnoses', 'readmitted']
+       'number_diagnoses', 'A1Cresult', 'readmitted']
 
     # Load and preprocess data
     data = engineer_features(load_data()[cols], 'readmitted', one_hot=True)

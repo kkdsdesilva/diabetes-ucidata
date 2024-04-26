@@ -18,6 +18,7 @@ def target_encode(df, col, dic):
     # return the column
     return data
 
+
 # label encode the categorical features
 def label_encode(data, target, cat_cols=None):
     '''Returns the data with categorical features labeled.'''
@@ -42,6 +43,7 @@ def label_encode(data, target, cat_cols=None):
     
     # return the data
     return data
+
 
 # one hot encode the categorical features
 def one_hot_encode(data, target, cat_cols=None):
@@ -83,6 +85,7 @@ def data_encode(data, target, readmit_days=False, one_hot=False, cat_cols=None):
 
     # return the data
     return data
+
 
 # change the diag columns
 def change_diag_columns(data):
