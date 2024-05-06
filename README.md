@@ -2,9 +2,10 @@
 
 ## 📝 Table of Contents
 1. [Goal](#📈-goal)
-2. [Data](#📊-data)
-3. [Data Collection and Preprocessing the data](#data-collection-and-preprocessing-the-data)
-4. [Results](#results)
+2. [Installing Required Packages](#Installing Required Packages)
+3. [Data](#📊-data)
+4. [Data Collection and Preprocessing the data](#data-collection-and-preprocessing-the-data)
+5. [Results](#results)
 
 ## 📈 Goal
 We are trying to predict whether a patient will be readmitted to the hospital (within or after 30 days of discharge). This is a classification problem. We will use the following models:
