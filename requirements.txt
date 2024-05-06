@@ -9,3 +9,5 @@ mlflow
 git
 pydot
 graphviz
+shap
+rfpimp
