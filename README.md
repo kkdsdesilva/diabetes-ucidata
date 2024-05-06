@@ -2,7 +2,7 @@
 
 ## 📝 Table of Contents
 1. [Goal](#📈-goal)
-2. [Installing Required Packages](#Installing Required Packages)
+2. [Installing Required Packages](#Installing-Required-Packages)
 3. [Data](#📊-data)
 4. [Data Collection and Preprocessing the data](#data-collection-and-preprocessing-the-data)
 5. [Results](#results)
