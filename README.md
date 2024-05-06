@@ -27,6 +27,14 @@ The dataset represents 10 years (1999-2008) of clinical care at 130 US hospitals
 - Laboratory tests were performed during the encounter.
 - Medications were administered during the encounter.
 
+## Installing Required Packages
+
+To install all the required python packages run the following code on linux terminal. 
+
+```bash
+  pip install -r requirements.txt
+```
+
 
 ## Data Collection and Preprocessing the data
 Data Collection
