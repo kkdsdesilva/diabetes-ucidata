@@ -13,6 +13,7 @@ from tensorflow.keras.metrics import Recall
 def create_nn(input_dim, learning_rate=0.01, hidden_layers=3, config=[32, 32, 8], \
                     activations=['relu', 'relu', 'relu', 'sigmoid'], \
                         l2_reg=[False, False, False], l2_lambda=[0.01, 0.01, 0.01]):
+    
     '''Create a neural network model.
     input_dim: int, the number of features
     learning_rate: float, the learning rate
@@ -51,11 +52,11 @@ def create_nn(input_dim, learning_rate=0.01, hidden_layers=3, config=[32, 32, 8]
 
 
 # train the nn model
-def train_nn(model, X_train, y_train, epochs=10, batch_size=32, validation_split=0.1):
+def train_nn(model, X_train, y_train, epochs=10, batch_size=32, validation_split=None, validation_data=None):
     '''Train the neural network model.'''
     
     # train the model
-    history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_split=validation_split)
+    history = model.fit(X_train, y_train, epochs=epochs, batch_size=batch_size, validation_split=validation_split, validation_data=validation_data)
 
     # return the model
     return model, history
