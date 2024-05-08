@@ -15,6 +15,7 @@ sys.path.append(root_dir)
 
 from src.data.load_data import load_data
 from src.models.NN import create_nn, train_nn 
+from src.models.save import save_model
 from src.data.split_data import split_data
 from src.features.selection import select_features
 from src.data.data_scaling import standardize_data, normalize_data
@@ -55,6 +56,9 @@ def main():
     print("Accuracy: ", history.history['val_accuracy'][-1])
     print("Recall: ", history.history['val_recall'][-1])
     print("AUC: ", history.history['val_auc'][-1])
+
+    # save the model
+    save_model(nn, root_dir+ '/models/nn_model.pkl')
 
     # plot accuracy, recall and auc and save
     plt.plot(history.history['val_accuracy'], label='accuracy')
