@@ -45,9 +45,9 @@ The following steps were followed for data collection:
 6. Save the data: The cleaned data was saved in a suitable format (e.g., CSV) for further analysis.
 
 
-#### FILEPATH: /src/data/data_preprocessing.py
+FILEPATH: /src/data/data_preprocessing.py
 
-Data Preprocessing
+#### Data Preprocessing
 
 Data preprocessing is an essential step in preparing the data for analysis and modeling. It involves transforming the raw data into a format that is suitable for machine learning algorithms. In this project, the following data preprocessing steps were performed:
 
@@ -62,9 +62,9 @@ The second part of the dataset includes the weight column, but only includes the
 By dividing the dataset in this way, we can handle the weight column separately or exclude it altogether, depending on the specific requirements of our analysis or modeling tasks.
 
 
-#### FILEPATH: /src/data/data_scaling.py
+FILEPATH: /src/data/data_scaling.py
 
-Data Scaling
+#### Data Scaling
 
 Data scaling is a technique used to standardize the range of features in the dataset. It ensures that all features have a similar scale, which can improve the performance of machine learning algorithms. In this project, the following data scaling techniques were applied:
 
