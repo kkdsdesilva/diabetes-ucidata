@@ -22,7 +22,6 @@ We are trying to predict whether a patient will be readmitted to the hospital (w
 - Logistic Regression (Just for the readmission)
 - Decision Tree
 - Random Forest
-- XGBoost
 - Neural Network
 
 ## Data Collection and Preprocessing the data
@@ -73,3 +72,14 @@ Data scaling is a technique used to standardize the range of features in the dat
 2. Standardization: This technique transforms the features to have zero mean and unit variance. It is calculated using the formula: $$\text{standardized value} = \frac{\text{value} - \text{mean}}{\text{standard deviation}}.$$
 
 These data scaling techniques were applied to the numeric features in the dataset to ensure that they have a consistent scale and distribution.
+
+## Model Building
+
+In this project, we built several models to predict whether a patient will be readmitted to the hospital. The following models were used:
+
+- Logistic Regression (Just for the readmission)
+- Decision Tree
+- Random Forest
+- Neural Network
+
+The models were trained on the preprocessed data and evaluated using appropriate metrics such as accuracy, precision, recall, and F1 score. The best performing model was selected based on these metrics. Neural Network was the best performing model with over 70% ROC-AUC score and over 0.7 recall score.
