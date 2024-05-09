@@ -4,6 +4,7 @@
 1. [Data](#📊-data)
 2. [Goal](#📈-goal)
 3. [Data Collection and Preprocessing the data](#data-collection-and-preprocessing-the-data)
+4. [Model Building](#model-building)
 
 ## 📊 Data
 
