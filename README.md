@@ -6,6 +6,7 @@
 3. [Exploratory Data Analysis](#📊-Exploratory-Data-Analysis)
 4. [Feature Engineering](#Feature-Engineering)
 5. [Results](#results)
+6. [Conclusion](#conclusion)
 
 ## 📈 Goal
 We are trying to predict whether a patient will be readmitted to the hospital (within or after 30 days of discharge). This is a classification problem. We will use the following models:
@@ -130,3 +131,8 @@ We utilized 3 different methods to evaluate feature importance.
 - Scikit-learn's Feature importance: averaging the decrease in impurity over trees
 - Permutation Feature Importance: based on how random re-shuffling of each perdictor influences the model performances. 
 - SHAP
+
+
+## Conclusion
+
+- Achieved a **0.7 Recall Rate** in predicting a diabetese patient would re-admit or not.  
