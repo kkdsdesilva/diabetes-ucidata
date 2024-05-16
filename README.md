@@ -82,13 +82,22 @@ FILEPATH: /src/data/data_scaling.py
 
 ### Class Distribution Analysis
 
- We checked for class imbalance.
+ We checked for class imbalance for the target variable.
 
 
 
 ## Feature Engineering
 
-## Data encoding
+You can find all the processes we implemented in this section, in _engeering.py_. You can call the functions by
+```bash
+from engineering import *function_name*
+``` 
+
+## Data Encoding
+
+First, we used **One-Hot** encoding for cateogorical data which resulted in close to 2500 features. 
+We also tried traning models for training data with **Ordinal Encoding** applied for features with hierarchy. 
+
 
 ### Data Scaling
 
@@ -102,7 +111,22 @@ These data scaling techniques were applied to the numeric features in the datase
 
 ### Feature Selection
 
+We applied two alogrithms seperately to select important features 
+- Recursive Feature Elimination
+- Boruta 
+
 
 ## Results
 
+### Performances
+
+We used Recall as the main metric to evaluate the performance of a model. We used the **ROC-auc** value to compare the models.
+
+To find the best threshold we caluclated the threshold for the maximum of **Young's J Statistic**. 
+
 ### Feature Importance 
+
+We utilized 3 different methods to evaluate feature importance.
+- Scikit-learn's Feature importance: averaging the decrease in impurity over trees
+- Permutation Feature Importance: based on how random re-shuffling of each perdictor influences the model performances. 
+- SHAP
