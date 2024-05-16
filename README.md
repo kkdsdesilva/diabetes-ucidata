@@ -3,8 +3,8 @@
 ## 📝 Table of Contents
 1. [Goal](#📈-goal)
 2. [Installing Required Packages](#Installing-Required-Packages)
-3. [Data](#📊-data)
-4. [Data Collection and Preprocessing the data](#data-collection-and-preprocessing-the-data)
+3. [Exploratory Data Analysis](#📊-Exploratory-Data-Analysis)
+4. [Feature Engineering](#Feature-Engineering)
 5. [Results](#results)
 
 ## 📈 Goal
@@ -15,8 +15,18 @@ We are trying to predict whether a patient will be readmitted to the hospital (w
 - XGBoost
 - Neural Network
 
+## Installing Required Packages
+
+To install all the required python packages run the following code on linux terminal. 
+
+```bash
+  pip install -r requirements.txt
+```
+
   
-## 📊 Data
+## 📊 Exploratory Data Analysis
+
+### Data
 
 [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008?fbclid=IwAR1K8yIAY03mM8Ipm6UQMjX5hW4hr3xbvKneoqDNR-93l2WPCqrXBjl59iM)
 
@@ -28,17 +38,8 @@ The dataset represents 10 years (1999-2008) of clinical care at 130 US hospitals
 - Laboratory tests were performed during the encounter.
 - Medications were administered during the encounter.
 
-## Installing Required Packages
 
-To install all the required python packages run the following code on linux terminal. 
-
-```bash
-  pip install -r requirements.txt
-```
-
-
-## Data Collection and Preprocessing the data
-Data Collection
+### Data Collection
 
 The data collection process involves gathering data from various sources and storing it in a suitable format for further analysis. In this project, the data was collected from the UCI Machine Learning Repository.
 
@@ -57,9 +58,11 @@ The following steps were followed for data collection:
 6. Save the data: The cleaned data was saved in a suitable format (e.g., CSV) for further analysis.
 
 
-#### FILEPATH: /src/data/data_preprocessing.py
+```bash
+ FILEPATH: /src/data/data_preprocessing.py
+ ```
 
-Data Preprocessing
+### Data Preprocessing
 
 Data preprocessing is an essential step in preparing the data for analysis and modeling. It involves transforming the raw data into a format that is suitable for machine learning algorithms. In this project, the following data preprocessing steps were performed:
 
@@ -73,10 +76,21 @@ The second part of the dataset includes the weight column, but only includes the
 
 By dividing the dataset in this way, we can handle the weight column separately or exclude it altogether, depending on the specific requirements of our analysis or modeling tasks.
 
+```bash
+FILEPATH: /src/data/data_scaling.py
+```
 
-#### FILEPATH: /src/data/data_scaling.py
+### Class Distribution Analysis
 
-Data Scaling
+ We checked for class imbalance.
+
+
+
+## Feature Engineering
+
+## Data encoding
+
+### Data Scaling
 
 Data scaling is a technique used to standardize the range of features in the dataset. It ensures that all features have a similar scale, which can improve the performance of machine learning algorithms. In this project, the following data scaling techniques were applied:
 
@@ -85,6 +99,8 @@ Data scaling is a technique used to standardize the range of features in the dat
 2. Standardization: This technique transforms the features to have zero mean and unit variance. It is calculated using the formula: $$\text{standardized value} = \frac{\text{value} - \text{mean}}{\text{standard deviation}}.$$
 
 These data scaling techniques were applied to the numeric features in the dataset to ensure that they have a consistent scale and distribution.
+
+### Feature Selection
 
 
 ## Results
