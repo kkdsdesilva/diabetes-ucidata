@@ -1,11 +1,30 @@
 # diabetes-ucidata
 
 ## 📝 Table of Contents
-1. [Data](#📊-data)
-2. [Goal](#📈-goal)
-3. [Data Collection and Preprocessing the data](#data-collection-and-preprocessing-the-data)
+1. [Goal](#📈-goal)
+2. [Installing Required Packages](#Installing-Required-Packages)
+3. [Exploratory Data Analysis](#📊-Exploratory-Data-Analysis)
+4. [Feature Engineering](#Feature-Engineering)
+5. [Results](#results)
 
-## 📊 Data
+## 📈 Goal
+We are trying to predict whether a patient will be readmitted to the hospital (within or after 30 days of discharge). This is a classification problem. We will use the following models:
+- Logistic Regression (Just for the readmission)
+- Decision Tree
+- Random Forest
+- XGBoost
+- Neural Network
+
+## Installing Required Packages
+
+To install all the required python packages run the following code on linux terminal. 
+
+```bash
+  pip install -r requirements.txt
+```
+
+  
+## 📊 Exploratory Data Analysis
 
 [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/296/diabetes+130-us+hospitals+for+years+1999-2008?fbclid=IwAR1K8yIAY03mM8Ipm6UQMjX5hW4hr3xbvKneoqDNR-93l2WPCqrXBjl59iM)
 
@@ -17,15 +36,10 @@ The dataset represents 10 years (1999-2008) of clinical care at 130 US hospitals
 - Laboratory tests were performed during the encounter.
 - Medications were administered during the encounter.
 
-## 📈 Goal
-We are trying to predict whether a patient will be readmitted to the hospital (within or after 30 days of discharge). This is a classification problem. We will use the following models:
-- Logistic Regression (Just for the readmission)
-- Decision Tree
-- Random Forest
-- XGBoost
-- Neural Network
 
-## Data Collection and Preprocessing the data
+
+
+## Feature Engineering
 Data Collection
 
 The data collection process involves gathering data from various sources and storing it in a suitable format for further analysis. In this project, the data was collected from the UCI Machine Learning Repository.
@@ -73,3 +87,8 @@ Data scaling is a technique used to standardize the range of features in the dat
 2. Standardization: This technique transforms the features to have zero mean and unit variance. It is calculated using the formula: $$\text{standardized value} = \frac{\text{value} - \text{mean}}{\text{standard deviation}}.$$
 
 These data scaling techniques were applied to the numeric features in the dataset to ensure that they have a consistent scale and distribution.
+
+
+## Results
+
+### Feature Importance 
