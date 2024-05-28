@@ -13,7 +13,7 @@ We are trying to predict whether a patient will be readmitted to the hospital (w
 - Logistic Regression (Just for the readmission)
 - Decision Tree
 - Random Forest
-- XGBoost
+- XGBoost with **Incremental Learning**
 - Neural Network
 
 ## Installing Required Packages
