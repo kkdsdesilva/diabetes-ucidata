@@ -113,8 +113,16 @@ These data scaling techniques were applied to the numeric features in the datase
 ### Feature Selection
 
 We applied two alogrithms seperately to select important features 
-- Recursive Feature Elimination
+- Recursive Feature Elimination (RFE)
+- Univariate Feature Selection : ANOVA F-value
+- Information Value(IV) and Weight of evidence (WoE)
+- Correlation
+- Variance Threshold
 - Boruta 
+
+
+Here is a Table summary that shows how each method selected the important features. 
+
 
 
 ## Results
