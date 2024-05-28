@@ -123,6 +123,9 @@ We applied two alogrithms seperately to select important features
 
 Here is a Table summary that shows how each method selected the important features. 
 
+<figure>
+  <img src="table-features.png" alt="Alt text" style="width:70%; height: 50%;">
+</figure>
 
 
 ## Results
